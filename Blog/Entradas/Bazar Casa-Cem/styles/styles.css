@@ -1,0 +1,197 @@
+/*
+    COLOR PALETTE:
+    #526B5C
+    #B0CCCF
+    #BCCEAF
+    #63806F
+    #FBFCFA
+    #26312A
+    #5A6D7F
+*/
+
+.hero-image {
+    height: 30vh;
+}
+
+.hero-image-content {
+    width: 100%;
+}
+
+.hero-image-title {
+    letter-spacing: 0.08em;
+}
+
+.hero-image-subtitle {
+    width: 100%;
+}
+
+#Acerca-de::before {
+    content: "";
+    display: block;
+    height: 10vh;
+    margin-top: -10vh;
+}
+
+#Acerca-de {
+    width: 100%;
+    background-color: #FBFCFA;
+}
+
+#Acerca-de-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 160px;
+}
+
+#Acerca-de h2{
+    margin: 0px;
+    font-size: 25px;
+    font-family: "Poppins", serif;
+    color: #26312A;
+}
+
+#Acerca-de p{
+    font-family: "Poppins", serif;
+    color: black;
+}
+
+#Acerca-de .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#Acerca-de .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 10px;
+    width: 700px;
+}
+
+#Acerca-de .content-text {
+    width: 650px;
+}
+
+#Acerca-de img {
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.separator-line::before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #5A6D7F;
+}
+
+#Iniciativas-list {
+    text-align: justify;
+}
+
+#Iniciativas-list h1 {
+    letter-spacing: 0.1em;
+    color: #26312A;
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    margin: 0;
+}
+
+#Iniciativas-list p {
+    letter-spacing: 0.01em;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#Iniciativas-list ul li {
+    letter-spacing: 0.01em;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#Iniciativas-list .image p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65em;
+    margin: 0;
+}
+
+.iniciativa-container {
+    width: 100%;
+}
+
+.iniciativa-container .map {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+}
+
+.iniciativa {
+    padding: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.iniciativa .iniciativa-enlace {
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.iniciativa .iniciativa-enlace a {
+    transition: all 0.3s ease;
+}
+
+.iniciativa .iniciativa-enlace:hover {
+    color: white;
+    background-color: #63806F;
+}
+
+.iniciativa .iniciativa-enlace:hover a {
+    color: white;
+}
+
+.iniciativa-text-right {
+    max-width: 50%;
+    margin-right: auto;
+}
+
+.iniciativa-image-right img {
+    width: 680px;
+    border-radius: 20px;
+    margin-left: auto;
+}
+
+.iniciativa-text-left {
+    max-width: 50%;
+    margin-left: auto;
+}
+
+.iniciativa-text-left h1 {
+    text-align: right;
+}
+
+.iniciativa-image-left img {
+    width: 680px;
+    border-radius: 20px;
+    margin-right: auto;
+}

@@ -1,0 +1,246 @@
+/*
+    COLOR PALETTE:
+    #526B5C
+    #B0CCCF
+    #BCCEAF
+    #63806F
+    #FBFCFA
+    #26312A
+    #5A6D7F
+*/
+
+.hero-image {
+    height: 70vh;
+}
+
+.hero-image-content {
+    width: 100%;
+}
+
+.hero-image-title {
+    letter-spacing: 0.10em;
+}
+
+.hero-image-subtitle {
+    width: 100%;
+}
+
+
+#Acerca-de::before {
+    content: "";
+    display: block;
+    height: 10vh;
+    margin-top: -10vh;
+}
+
+#Acerca-de {
+    width: 100%;
+    background-color: #FBFCFA;
+}
+
+#Acerca-de-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 160px;
+}
+
+#Acerca-de h2{
+    margin: 0px;
+    font-size: 25px;
+    font-family: "Poppins", serif;
+    color: #26312A;
+}
+
+#Acerca-de p{
+    font-family: "Poppins", serif;
+    color: black;
+}
+
+#Acerca-de .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#Acerca-de .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 10px;
+    width: 700px;
+}
+
+#Acerca-de .content-text {
+    width: 650px;
+}
+
+#Acerca-de img {
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.separator-line::before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #5A6D7F;
+}
+
+#Sobre-nosotros {
+    width: 100%;
+    padding: 20px;
+}
+
+#Sobre-nosotros-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#Sobre-nosotros .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;
+}
+
+#Sobre-nosotros .column {
+    width: 310.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#Sobre-nosotros .frame {
+    width: 310.4px;
+    height: 372.8px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#Sobre-nosotros .frame img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Sobre-nosotros .column .name p {
+    margin: 0;
+    letter-spacing: 0.25em;
+    color: black;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+#Sobre-nosotros .name {
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#Sobre-nosotros .column .name-casa-cem p {
+    margin: 0;
+    letter-spacing: 0.25em;
+    color: black;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+#Sobre-nosotros .name-casa-cem {
+    width: 265px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#Sobre-nosotros .column:hover .name {
+    text-decoration: underline;
+}
+
+#Sobre-nosotros .role {
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    letter-spacing: 0.25em;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+#Sobre-nosotros .column:hover .role {
+    opacity: 1;
+}
+
+#Sobre-nosotros .role p {
+    max-width: 70%;
+    text-decoration: underline;
+}
+
+#Sobre-nosotros::before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #5A6D7F;
+}
+
+#Sobre-nosotros h1 {
+    letter-spacing: 0.05em;
+    color: #26312A;
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    text-align: center;
+}
+
+.image-ref {
+    font-family: "Poppins", serif;
+    font-size: 10px;
+}
+
+.image-ref p {
+    margin: 0px;
+}
