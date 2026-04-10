@@ -10,6 +10,27 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /* Syntax: [Thumb Color] [Track Color] */
+    scrollbar-color: #9C0A4F #DCE7C9; 
+    scrollbar-width: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #DCE7C9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9C0A4F;
+    border-radius: 10px;
+    border: 2px solid #DCE7C9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a083d;
 }
 
 body {
