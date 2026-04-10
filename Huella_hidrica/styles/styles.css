@@ -1,12 +1,8 @@
 /*
     COLOR PALETTE:
-    #526B5C
-    #B0CCCF
-    #BCCEAF
-    #63806F
-    #FBFCFA
-    #26312A
-    #5A6D7F
+    #9C0A4F ACCENTS
+    #364530 DARKER
+    #DCE7C9 LIGHTER
 */
 
 .hero-image {
@@ -51,7 +47,7 @@
     margin: 0px;
     font-size: 25px;
     font-family: "Poppins", serif;
-    color: #26312A;
+    color: #364530;
 }
 
 #Acerca-de p{
@@ -163,7 +159,7 @@
 
 .iniciativa .iniciativa-enlace:hover {
     color: white;
-    background-color: #63806F;
+    background-color: #9C0A4F;
 }
 
 .iniciativa .iniciativa-enlace:hover a {
