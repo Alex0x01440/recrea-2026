@@ -926,6 +926,11 @@ footer .fa-instagram:hover {
         padding: 0 20px;
         line-height: 44px;
     }
+
+    /* Carousel: show 2 cards */
+    .post-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
 }
 
 /* ── Narrow screens / mobile — stack Sobre-nosotros cards vertically (≤ 720px) ── */
@@ -948,5 +953,12 @@ footer .fa-instagram:hover {
  
     #Sobre-nosotros .column .name p {
         font-size: 14px;
+    }
+}
+
+/* ── Very narrow phones — carousel shows 1 card (≤ 480px) ── */
+@media (max-width: 480px) {
+    .post-card {
+        flex: 0 0 100%;
     }
 }

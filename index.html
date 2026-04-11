@@ -198,41 +198,61 @@
         const cards = Array.from(track.querySelectorAll('.post-card'));
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
-        const visibleCount = 3;
         const totalCards = cards.length;
-        const totalSlides = Math.max(1, totalCards - visibleCount + 1);
         let current = 0;
-
-        for (let i = 0; i < totalSlides; i++) {
-          const dot = document.createElement('div');
-          dot.className = 'dot' + (i === 0 ? ' active' : '');
-          dot.addEventListener('click', () => goTo(i));
-          dotsContainer.appendChild(dot);
+ 
+        // Must match the CSS breakpoints below
+        function getVisibleCount() {
+          if (window.innerWidth <= 480) return 1;
+          if (window.innerWidth <= 768) return 2;
+          return 3;
         }
-
+ 
         function getCardWidth() {
           return cards[0].getBoundingClientRect().width + 24;
         }
-
+ 
+        function getTotalSlides() {
+          return Math.max(1, totalCards - getVisibleCount() + 1);
+        }
+ 
         function updateButtons() {
           prevBtn.disabled = current === 0;
-          nextBtn.disabled = current >= totalSlides - 1;
+          nextBtn.disabled = current >= getTotalSlides() - 1;
         }
-
+ 
+        function rebuildDots() {
+          dotsContainer.innerHTML = '';
+          for (let i = 0; i < getTotalSlides(); i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === current ? ' active' : '');
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+          }
+        }
+ 
         function goTo(index) {
-          current = Math.max(0, Math.min(index, totalSlides - 1));
+          current = Math.max(0, Math.min(index, getTotalSlides() - 1));
           track.style.transform = `translateX(-${current * getCardWidth()}px)`;
           dotsContainer.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
           updateButtons();
         }
-
+ 
+        function reinit() {
+          current = 0;
+          track.style.transform = 'translateX(0)';
+          rebuildDots();
+          updateButtons();
+        }
+ 
         prevBtn.addEventListener('click', () => goTo(current - 1));
         nextBtn.addEventListener('click', () => goTo(current + 1));
+ 
         document.addEventListener('keydown', e => {
           if (e.key === 'ArrowLeft') goTo(current - 1);
           if (e.key === 'ArrowRight') goTo(current + 1);
         });
-
+ 
         let startX = 0;
         track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
         track.addEventListener('touchend', e => {
@@ -240,20 +260,27 @@
           if (dx < -50) goTo(current + 1);
           if (dx > 50) goTo(current - 1);
         });
-
-        updateButtons();
+ 
+        // Reinit on resize so dots and buttons stay correct when rotating device
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(reinit, 150);
+        });
+ 
+        reinit();
       }
-
+ 
       /* ── Hamburger menu ── */
       const hamburger = document.getElementById('hamburger-btn');
       const navMenu = document.getElementById('nav-menu');
-
+ 
       hamburger.addEventListener('click', () => {
         const isOpen = navMenu.classList.toggle('nav-open');
         hamburger.classList.toggle('is-open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen);
       });
-
+ 
       // Close menu when a nav link is clicked
       navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
