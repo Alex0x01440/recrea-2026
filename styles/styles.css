@@ -9,10 +9,11 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* Syntax: [Thumb Color] [Track Color] */
     scrollbar-color: #9C0A4F #DCE7C9; 
     scrollbar-width: auto;
+    scrollbar-gutter: stable;
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +49,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 0 2vh;
+    padding: 0 0vh;
     align-items: center;
     justify-content: space-between;
 }
@@ -57,7 +58,7 @@ body {
     height: 8vh;
     float: left;
     padding-top: 0.5vh;
-    padding-left: 1vh;
+    padding-left: 3vh;
 }
 
 #top-navigation-bar ul {
@@ -77,9 +78,9 @@ body {
     position: relative;
     color: black;
     font-family: "Poppins", sans-serif;
-    font-size: 1.9vh;
+    font-size: 2vh;
     text-decoration: none;
-    padding: 5vh 10vh;
+    padding: 5vh 4vw;
     text-align: center;
     letter-spacing: 0.1em;
     transition: color 0.3s ease;
@@ -93,9 +94,9 @@ body {
     content: "";
     position: absolute;
     left: -10%;
-    bottom: 9px;
+    bottom: 1.2vh;
     width: 120%;
-    height: 3px;
+    height: 0.4vh;
     background-color: #364530;
     transition: all 0.3s ease;
 }
@@ -119,7 +120,7 @@ body {
     display: inline-block;
     font-family: "Poppins", serif;
     font-weight: 400;
-    font-size: 1.6vh;
+    font-size: 2vh;
     letter-spacing: 0.1em;
     padding: 0 1.8vh;
     line-height: 6vh;
@@ -297,7 +298,8 @@ body {
 
 #Sobre-nosotros {
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #Sobre-nosotros-content {
@@ -413,46 +415,46 @@ body {
 body { background: #FBFCFA; font-family: "Poppins", sans-serif; } */
 
 #instagram-carousel {
-width: 100%;
-padding: 80px 20px;
-background-color: #FBFCFA;
-position: relative;
+    width: 100%;
+    padding: 80px 0px;
+    background-color: #FBFCFA;
+    position: relative;
 }
 
 #instagram-carousel::before {
-content: "";
-position: absolute;
-top: 0;
-left: 10%;
-width: 80%;
-height: 3px;
-background-color: #9C0A4F;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #9C0A4F;
 }
 
 #instagram-carousel h1 {
-letter-spacing: 0.05em;
-color: #26312A;
-font-family: "Slabo 27px", serif;
-font-weight: 400;
-font-size: 35px;
-text-align: center;
-margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    color: #26312A;
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .carousel-subtitle {
-text-align: center;
-font-family: "Poppins", sans-serif;
-font-size: 14px;
-letter-spacing: 0.15em;
-color: #526B5C;
-margin-bottom: 48px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    color: #526B5C;
+    margin-bottom: 48px;
 }
 
 .carousel-outer {
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-track-window {
@@ -462,191 +464,166 @@ justify-content: center;
 }
 
 .carousel-track {
-display: flex;
-gap: 24px;
-transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
-will-change: transform;
+    display: flex;
+    gap: 24px;
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: transform;
 }
 
 .post-card {
-flex: 0 0 calc((100% - 48px) / 3);
-border-radius: 20px;
-overflow: hidden;
-background: #fff;
-border: 1.5px solid #DCE7C9;
-box-shadow: #364530 4px 4px 0 0;
-display: flex;
-flex-direction: column;
-transition: transform 0.25s ease, box-shadow 0.25s ease;
-cursor: pointer;
-text-decoration: none;
+    flex: 0 0 calc((100% - 48px) / 3);
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    border: 1.5px solid #DCE7C9;
+    box-shadow: #364530 4px 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .post-card:hover {
-transform: translateY(-4px);
-box-shadow: #364530 6px 8px 0 0;
+    transform: translateY(-4px);
+    box-shadow: #364530 6px 8px 0 0;
 }
 
 .post-img-wrap {
-width: 100%;
-aspect-ratio: 1 / 1;
-overflow: hidden;
-position: relative;
-background: #DCE7C9;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    background: #DCE7C9;
 }
 
 .post-img-wrap img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .post-card:hover .post-img-wrap img {
-transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 .post-overlay {
-position: absolute;
-inset: 0;
-background: rgba(54, 69, 48, 0.55);
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: opacity 0.3s ease;
+    position: absolute;
+    inset: 0;
+    background: rgba(54, 69, 48, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .post-card:hover .post-overlay {
-opacity: 1;
+    opacity: 1;
 }
 
 .post-overlay .fa-instagram {
-font-size: 40px;
-color: white;
+    font-size: 40px;
+    color: white;
 }
 
 .post-body {
-padding: 16px 18px 18px;
-display: flex;
-flex-direction: column;
-gap: 8px;
-flex: 1;
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
 }
 
 .post-tag {
-font-size: 10px;
-letter-spacing: 0.2em;
-color: #526B5C;
-text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #526B5C;
+    text-transform: uppercase;
 }
 
 .post-caption {
-font-size: 13px;
-color: #26312A;
-line-height: 1.6;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
+    font-size: 13px;
+    color: #26312A;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .post-meta {
-display: flex;
-align-items: center;
-gap: 14px;
-margin-top: auto;
-padding-top: 10px;
-border-top: 1px solid #DCE7C9;
-font-size: 12px;
-color: #526B5C;
-letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #DCE7C9;
+    font-size: 12px;
+    color: #526B5C;
+    letter-spacing: 0.05em;
 }
 
 .post-meta span { display: flex; align-items: center; gap: 5px; }
 
 .carousel-btn {
-background-color: #DCE7C9;
-border: 2px solid #364530;
-border-radius: 50%;
-box-shadow: #364530 3px 3px 0 0;
-color: #364530;
-width: 44px;
-height: 44px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-cursor: pointer;
-flex-shrink: 0;
-transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
-margin: 0 12px;
+    background-color: #DCE7C9;
+    border: 2px solid #364530;
+    border-radius: 50%;
+    box-shadow: #364530 3px 3px 0 0;
+    color: #364530;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    margin: 0 12px;
 }
 
 .carousel-btn:hover { background-color: #fff; }
 .carousel-btn:active {
-box-shadow: #364530 1px 1px 0 0;
-transform: translate(2px, 2px);
+    box-shadow: #364530 1px 1px 0 0;
+    transform: translate(2px, 2px);
 }
+
 .carousel-btn:disabled {
-opacity: 0.35;
-cursor: default;
-pointer-events: none;
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
 }
 
 .carousel-dots {
-display: flex;
-justify-content: center;
-gap: 8px;
-margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 36px;
 }
 
 .dot {
-width: 8px;
-height: 8px;
-border-radius: 50%;
-background: #DCE7C9;
-border: 1.5px solid #364530;
-cursor: pointer;
-transition: background 0.3s ease, transform 0.2s ease;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #DCE7C9;
+    border: 1.5px solid #364530;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .dot.active {
-background: #364530;
-transform: scale(1.25);
+    background: #364530;
+    transform: scale(1.25);
 }
 
 .carousel-cta {
-text-align: center;
-margin-top: 40px;
-}
-
-.button-75 {
-background-color: #DCE7C9;
-border: 2px solid #364530;
-border-radius: 30px;
-box-shadow: #364530 4px 4px 0 0;
-color: #364530;
-cursor: pointer;
-display: inline-flex;
-align-items: center;
-gap: 8px;
-font-family: "Poppins", sans-serif;
-font-weight: 400;
-font-size: 14px;
-letter-spacing: 0.1em;
-padding: 0 22px;
-line-height: 48px;
-text-decoration: none;
-transition: background-color 0.3s ease, box-shadow 0.15s ease, transform 0.15s ease;
-user-select: none;
-}
-
-.button-75:hover { background-color: #fff; }
-.button-75:active {
-box-shadow: #364530 2px 2px 0 0;
-transform: translate(2px, 2px);
+    text-align: center;
+    margin-top: 40px;
 }
 
 footer {
@@ -846,5 +823,28 @@ footer .fa-instagram:hover {
 
     #Sobre-nosotros .column .name p {
         font-size: 12px;
+    }
+}
+
+/* ── Narrow screens / mobile — stack Sobre-nosotros cards vertically (≤ 720px) ── */
+@media (max-width: 720px) {
+    #Sobre-nosotros .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+ 
+    #Sobre-nosotros .column {
+        width: min(310px, 80vw);
+    }
+ 
+    #Sobre-nosotros .frame {
+        width: min(310px, 80vw);
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+ 
+    #Sobre-nosotros .column .name p {
+        font-size: 14px;
     }
 }
