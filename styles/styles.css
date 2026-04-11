@@ -90,7 +90,7 @@ body {
     color: #526B5C;
 }
 
-#top-navigation-bar ul li a.active::after {
+/* #top-navigation-bar ul li a.active::after {
     content: "";
     position: absolute;
     left: -10%;
@@ -104,7 +104,7 @@ body {
 #top-navigation-bar:hover ul li a.active::after {
     left: 0%;
     width: 100%;
-}
+} */
 
 #top-navigation-bar ul li a:hover:not(.active){
     color: white;
@@ -122,7 +122,7 @@ body {
     font-weight: 400;
     font-size: 2vh;
     letter-spacing: 0.1em;
-    padding: 0 1.8vh;
+    padding: 0 0.8vw;
     line-height: 6vh;
     text-align: center;
     text-decoration: none;
@@ -688,6 +688,49 @@ footer .fa-instagram:hover {
 }
 
 /* ============================================================
+   HAMBURGER BUTTON — hidden on desktop, shown on mobile
+   ============================================================ */
+
+#hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-right: 3vh;
+    z-index: 1100;
+    flex-shrink: 0;
+}
+
+#hamburger-btn span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background-color: #364530;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate to X when open */
+#hamburger-btn.is-open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+#hamburger-btn.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#hamburger-btn.is-open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ============================================================
    PC RESPONSIVE — only targets desktop/laptop widths
    No mobile breakpoints included by design.
    ============================================================ */
@@ -823,6 +866,65 @@ footer .fa-instagram:hover {
 
     #Sobre-nosotros .column .name p {
         font-size: 12px;
+    }
+}
+
+/* ── Mobile — hamburger nav (≤ 768px) ── */
+@media (max-width: 768px) {
+    #top-navigation-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        position: relative;
+    }
+
+    #hamburger-btn {
+        display: flex;
+    }
+
+    #top-navigation-bar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: #DCE7C9;
+        padding: 16px 0 24px;
+        margin: 0;
+        height: auto;
+        float: none;
+        gap: 4px;
+        box-shadow: 0 6px 16px rgba(54, 69, 48, 0.15);
+        z-index: 999;
+    }
+
+    #top-navigation-bar ul.nav-open {
+        display: flex;
+    }
+
+    #top-navigation-bar ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #top-navigation-bar ul li a {
+        display: block;
+        padding: 12px 24px;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+    }
+
+    #top-navigation-bar ul li:last-child {
+        margin-top: 8px;
+    }
+
+    .button-75 {
+        font-size: 14px;
+        padding: 0 20px;
+        line-height: 44px;
     }
 }
 
