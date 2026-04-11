@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
     /* Syntax: [Thumb Color] [Track Color] */
-    scrollbar-color: #9C0A4F #DCE7C9; 
+    scrollbar-color: #9C0A4F #DCE7C9;
     scrollbar-width: auto;
     scrollbar-gutter: stable;
 }
@@ -40,33 +40,40 @@ body {
     background-color: #fbfcfa;
 }
 
+/* ── Navigation bar ─────────────────────────────────────────
+   Fixed px height: navbars are structural chrome, not content.
+   vh would make this tiny on landscape phones.
+   ────────────────────────────────────────────────────────── */
+
 #top-navigation-bar {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #DCE7C9;
-    height: 10vh;
+    height: 64px;
     width: 100%;
-    top: 0;
     left: 0;
-    padding: 0 0vh;
+    padding: 0;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 #top-navigation-bar img {
-    height: 8vh;
+    height: 48px;
     float: left;
-    padding-top: 0.5vh;
-    padding-left: 3vh;
+    padding-top: 0px;
+    padding-left: 24px;
 }
 
 #top-navigation-bar ul {
-    height: 6vh;
+    height: 64px;
     list-style-type: none;
     display: flex;
     float: right;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 #top-navigation-bar ul li {
@@ -78,9 +85,10 @@ body {
     position: relative;
     color: black;
     font-family: "Poppins", sans-serif;
-    font-size: 2vh;
+    font-size: 13px;     /* px: nav text shouldn't scale with screen height */
     text-decoration: none;
-    padding: 5vh 4vw;
+    padding: 0 1.5vw;   /* vw for horizontal spacing only — relates to width */
+    line-height: 64px;  /* match navbar height to center vertically */
     text-align: center;
     letter-spacing: 0.1em;
     transition: color 0.3s ease;
@@ -94,9 +102,9 @@ body {
     content: "";
     position: absolute;
     left: -10%;
-    bottom: 1.2vh;
+    bottom: 12px;
     width: 120%;
-    height: 0.4vh;
+    height: 2px;
     background-color: #364530;
     transition: all 0.3s ease;
 }
@@ -106,9 +114,13 @@ body {
     width: 100%;
 } */
 
-#top-navigation-bar ul li a:hover:not(.active){
+#top-navigation-bar ul li a:hover:not(.active) {
     color: white;
 }
+
+/* ── Button: SÍGUENOS (nav) ─────────────────────────────────
+   px throughout: button sizing should be stable and predictable.
+   ────────────────────────────────────────────────────────── */
 
 .button-75 {
     background-color: #DCE7C9;
@@ -120,10 +132,10 @@ body {
     display: inline-block;
     font-family: "Poppins", serif;
     font-weight: 400;
-    font-size: 2vh;
+    font-size: 13px;
     letter-spacing: 0.1em;
-    padding: 0 0.8vw;
-    line-height: 6vh;
+    padding: 0 16px;
+    line-height: 38px;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -131,11 +143,11 @@ body {
     touch-action: manipulation;
     transition: background-color 0.3s ease;
 }
-  
+
 .button-75:hover {
     background-color: #fff;
 }
-  
+
 .button-75:active {
     box-shadow: #364530 2px 2px 0 0;
     transform: translate(2px, 2px);
@@ -145,6 +157,12 @@ body {
     box-shadow: #364530 2px 2px 0 0;
     transform: translate(2px, 2px);
 }
+
+/* ── Hero image ─────────────────────────────────────────────
+   vh is correct here: the hero should fill screen height.
+   Hero text uses vw instead — scales with width, not height,
+   so it stays readable in both portrait and landscape.
+   ────────────────────────────────────────────────────────── */
 
 .hero-image {
     height: 80vh;
@@ -167,7 +185,7 @@ body {
     font-family: "Slabo 27px", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 10vh;
+    font-size: clamp(48px, 10vw, 96px);
 }
 
 .hero-image-subtitle {
@@ -176,7 +194,7 @@ body {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3vh;
+    font-size: clamp(14px, 2.5vw, 28px);
 }
 
 .image p {
@@ -190,7 +208,7 @@ body {
     bottom: 10px;
     left: 15px;
     font-family: "Poppins", sans-serif;
-    font-size: 1.5vh;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
@@ -200,6 +218,8 @@ body {
 .image-footer p {
     margin: 0;
 }
+
+/* ── Button: ÚNETE AL MOVIMIENTO (hero) ─────────────────── */
 
 .button-74 {
     background-color: #DCE7C9;
@@ -212,8 +232,8 @@ body {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
+    padding: 12px 18px;
+    line-height: 25px;
     letter-spacing: 0.1em;
     text-align: center;
     text-decoration: none;
@@ -221,12 +241,13 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     transition: background-color 0.3s ease;
+    margin-top: 16px;
 }
-  
+
 .button-74:hover {
     background-color: #fff;
 }
-  
+
 .button-74:active {
     box-shadow: #364530 2px 2px 0 0;
     transform: translate(2px, 2px);
@@ -237,15 +258,14 @@ body {
     transform: translate(2px, 2px);
 }
 
-.hero-image .button-74 {
-    margin-top: 2vh;
-}
+/* ── Acerca de ──────────────────────────────────────────── */
 
+/* Offset for sticky nav so the section doesn't hide behind it */
 #Acerca-de::before {
     content: "";
     display: block;
-    height: 10vh;
-    margin-top: -10vh;
+    height: 64px;
+    margin-top: -64px;
 }
 
 #Acerca-de {
@@ -263,12 +283,12 @@ body {
     gap: 160px;
 }
 
-#Acerca-de h2{
+#Acerca-de h2 {
     font-family: "Poppins", serif;
     color: #26312A;
 }
 
-#Acerca-de p{
+#Acerca-de p {
     font-family: "Poppins", serif;
     color: black;
 }
@@ -296,6 +316,8 @@ body {
     border-radius: 15px;
 }
 
+/* ── Sobre nosotros ─────────────────────────────────────── */
+
 #Sobre-nosotros {
     width: 100%;
     padding-top: 20px;
@@ -319,7 +341,7 @@ body {
 }
 
 #Sobre-nosotros .column {
-    width: 310.4px;
+    width: 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,8 +351,8 @@ body {
 }
 
 #Sobre-nosotros .frame {
-    width: 310.4px;
-    height: 372.8px;
+    width: 310px;
+    height: 373px;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
@@ -411,8 +433,7 @@ body {
     text-align: center;
 }
 
-/* * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #FBFCFA; font-family: "Poppins", sans-serif; } */
+/* ── Instagram carousel ─────────────────────────────────── */
 
 #instagram-carousel {
     width: 100%;
@@ -626,15 +647,20 @@ body { background: #FBFCFA; font-family: "Poppins", sans-serif; } */
     margin-top: 40px;
 }
 
+/* ── Footer ─────────────────────────────────────────────────
+   max() ensures the footer never collapses below 200px in
+   landscape, while still being generous on tall screens.
+   ────────────────────────────────────────────────────────── */
+
 footer {
     background-color: #364530;
-    height: 32vh;
+    height: max(200px, 32vh);
     position: relative;
     color: white;
 }
 
 footer img {
-    height: 6.5vh;
+    height: 52px;
 }
 
 .footer-title {
@@ -643,7 +669,7 @@ footer img {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3vh;
+    font-size: 22px;
 }
 
 .footer-content {
@@ -674,7 +700,7 @@ footer .fa {
 }
 
 footer .fa-instagram {
-  	background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045, #364530, #364530, #364530);
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045, #364530, #364530, #364530);
     background-size: 250% 250%;
     background-position: right;
 }
@@ -703,7 +729,7 @@ footer .fa-instagram:hover {
     border: none;
     cursor: pointer;
     padding: 4px;
-    margin-right: 3vh;
+    margin-right: 16px;
     z-index: 1100;
     flex-shrink: 0;
 }
@@ -731,8 +757,8 @@ footer .fa-instagram:hover {
 }
 
 /* ============================================================
-   PC RESPONSIVE — only targets desktop/laptop widths
-   No mobile breakpoints included by design.
+   RESPONSIVE — desktop / laptop widths
+   All vh units in nav rules replaced with px equivalents.
    ============================================================ */
 
 /* ── Large laptops / lower-res desktops (≤ 1600px) ── */
@@ -757,7 +783,7 @@ footer .fa-instagram:hover {
 /* ── Medium laptops (≤ 1366px) ── */
 @media (max-width: 1366px) {
     #top-navigation-bar ul li a {
-        padding: 5vh 5vh;
+        padding: 0 20px;
     }
 
     #Acerca-de-content {
@@ -789,8 +815,8 @@ footer .fa-instagram:hover {
 /* ── Small laptops / 1280-wide screens (≤ 1280px) ── */
 @media (max-width: 1280px) {
     #top-navigation-bar ul li a {
-        padding: 5vh 3.5vh;
-        font-size: 1.7vh;
+        padding: 0 14px;
+        font-size: 12px;
     }
 
     #Acerca-de-content {
@@ -824,17 +850,16 @@ footer .fa-instagram:hover {
 /* ── Compact laptops (≤ 1100px) ── */
 @media (max-width: 1100px) {
     #top-navigation-bar ul li a {
-        padding: 5vh 2.5vh;
-        font-size: 1.5vh;
+        padding: 0 10px;
+        font-size: 11px;
         letter-spacing: 0.05em;
     }
 
     .button-75 {
-        font-size: 1.4vh;
+        font-size: 11px;
         padding: 0 12px;
     }
 
-    /* Stack Acerca-de columns vertically */
     #Acerca-de-content {
         flex-direction: column;
         gap: 50px;
@@ -842,7 +867,6 @@ footer .fa-instagram:hover {
         padding-bottom: 60px;
     }
 
-    /* Put Vision image on top again when stacked (it was already ordered correctly) */
     #Acerca-de .content {
         width: min(500px, 85vw);
     }
@@ -875,7 +899,7 @@ footer .fa-instagram:hover {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 10vh;
+        height: 64px;
         position: relative;
     }
 
@@ -887,7 +911,7 @@ footer .fa-instagram:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 10vh;
+        top: 64px;          /* match navbar height exactly */
         left: 0;
         width: 100%;
         background-color: #DCE7C9;
@@ -913,6 +937,7 @@ footer .fa-instagram:hover {
     #top-navigation-bar ul li a {
         display: block;
         padding: 12px 24px;
+        line-height: normal;
         font-size: 14px;
         letter-spacing: 0.1em;
     }
@@ -933,6 +958,23 @@ footer .fa-instagram:hover {
     }
 }
 
+/* ── Landscape phones — prevent nav from shrinking (≤ 500px tall) ── */
+@media (orientation: landscape) and (max-height: 500px) {
+    #top-navigation-bar {
+        height: 52px;
+    }
+
+    #top-navigation-bar img {
+        height: 36px;
+    }
+
+    /* Dropdown menu sits below the shorter bar */
+    #top-navigation-bar ul {
+        top: 52px;
+        height: 52px;
+    }
+}
+
 /* ── Narrow screens / mobile — stack Sobre-nosotros cards vertically (≤ 720px) ── */
 @media (max-width: 720px) {
     #Sobre-nosotros .content {
@@ -940,17 +982,17 @@ footer .fa-instagram:hover {
         align-items: center;
         gap: 32px;
     }
- 
+
     #Sobre-nosotros .column {
         width: min(310px, 80vw);
     }
- 
+
     #Sobre-nosotros .frame {
         width: min(310px, 80vw);
         height: auto;
         aspect-ratio: 4 / 5;
     }
- 
+
     #Sobre-nosotros .column .name p {
         font-size: 14px;
     }
