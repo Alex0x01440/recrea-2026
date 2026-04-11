@@ -40,6 +40,16 @@ body {
     background-color: #fbfcfa;
 }
 
+/* ── Design tokens ──────────────────────────────────────────
+   Single source of truth for structural measurements.
+   Update here and everything that references the variable
+   adjusts automatically — including calc() expressions.
+   ────────────────────────────────────────────────────────── */
+
+:root {
+    --nav-height: 64px;
+}
+
 /* ── Navigation bar ─────────────────────────────────────────
    Fixed px height: navbars are structural chrome, not content.
    vh would make this tiny on landscape phones.
@@ -50,24 +60,28 @@ body {
     top: 0;
     z-index: 1000;
     background-color: #DCE7C9;
-    height: 64px;
+    height: var(--nav-height);
     width: 100%;
-    left: 0;
-    padding: 0;
+    
+    /* ADD THESE: Ensures padding inside the safe zone */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
 #top-navigation-bar img {
     height: 48px;
     float: left;
-    padding-top: 0px;
+    padding-top: 4px;
     padding-left: 24px;
 }
 
 #top-navigation-bar ul {
-    height: 64px;
+    height: var(--nav-height);
     list-style-type: none;
     display: flex;
     float: right;
@@ -85,10 +99,10 @@ body {
     position: relative;
     color: black;
     font-family: "Poppins", sans-serif;
-    font-size: 13px;     /* px: nav text shouldn't scale with screen height */
+    font-size: 13px;
     text-decoration: none;
-    padding: 0 1.5vw;   /* vw for horizontal spacing only — relates to width */
-    line-height: 64px;  /* match navbar height to center vertically */
+    padding: 0 1.5vw;
+    line-height: var(--nav-height);
     text-align: center;
     letter-spacing: 0.1em;
     transition: color 0.3s ease;
@@ -159,13 +173,15 @@ body {
 }
 
 /* ── Hero image ─────────────────────────────────────────────
-   vh is correct here: the hero should fill screen height.
-   Hero text uses vw instead — scales with width, not height,
-   so it stays readable in both portrait and landscape.
+   calc(100vh - var(--nav-height)) fills exactly the remaining
+   viewport below the navbar. The variable updates automatically
+   in the landscape breakpoint so the math stays correct.
+   Text uses min(vw, vh) so it stays proportional to whichever
+   dimension is smaller — prevents huge text in landscape.
    ────────────────────────────────────────────────────────── */
 
 .hero-image {
-    height: 80vh;
+    height: calc(90vh - var(--nav-height));
     background-size: cover;
     position: relative;
 }
@@ -177,6 +193,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    /* Ensure text stays away from notches on landscape */
+    width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
 }
 
 .hero-image-title {
@@ -185,7 +203,7 @@ body {
     font-family: "Slabo 27px", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(48px, 10vw, 96px);
+    font-size: clamp(32px, min(10vw, 8vh), 96px);
 }
 
 .hero-image-subtitle {
@@ -194,7 +212,7 @@ body {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(14px, 2.5vw, 28px);
+    font-size: clamp(12px, min(2.5vw, 2.5vh), 28px);
 }
 
 .image p {
@@ -264,8 +282,8 @@ body {
 #Acerca-de::before {
     content: "";
     display: block;
-    height: 64px;
-    margin-top: -64px;
+    height: var(--nav-height);
+    margin-top: calc(-1 * var(--nav-height));
 }
 
 #Acerca-de {
@@ -657,6 +675,11 @@ footer {
     height: max(200px, 32vh);
     position: relative;
     color: white;
+    
+    /* ADD THESE: Handles landscape notches and bottom home indicators */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom); 
 }
 
 footer img {
@@ -899,7 +922,7 @@ footer .fa-instagram:hover {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 64px;
+        height: var(--nav-height);
         position: relative;
     }
 
@@ -911,7 +934,7 @@ footer .fa-instagram:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 64px;          /* match navbar height exactly */
+        top: var(--nav-height);
         left: 0;
         width: 100%;
         background-color: #DCE7C9;
@@ -922,6 +945,9 @@ footer .fa-instagram:hover {
         gap: 4px;
         box-shadow: 0 6px 16px rgba(54, 69, 48, 0.15);
         z-index: 999;
+
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
 
     #top-navigation-bar ul.nav-open {
@@ -960,18 +986,13 @@ footer .fa-instagram:hover {
 
 /* ── Landscape phones — prevent nav from shrinking (≤ 500px tall) ── */
 @media (orientation: landscape) and (max-height: 500px) {
-    #top-navigation-bar {
-        height: 52px;
+    :root {
+        --nav-height: 52px; /* updating the variable cascades to hero height,
+                               scroll anchor offset, and dropdown position */
     }
 
     #top-navigation-bar img {
         height: 36px;
-    }
-
-    /* Dropdown menu sits below the shorter bar */
-    #top-navigation-bar ul {
-        top: 52px;
-        height: 52px;
     }
 }
 
