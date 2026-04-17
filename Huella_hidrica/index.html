@@ -28,9 +28,9 @@
             <div class="hero-image-subtitle">¿Cuál es el gasto de agua de tus áreas verdes?</div>
             <button class="button-74" onclick="location.href='#Acerca-de'">CONOCER MÁS</button>
         </div>
-        <div class="image-footer">
-            <!-- <p>Imagen de fundacaotelefonicavivo.org.br. Extraída el 9 nov, 2024.</p> -->
-        </div>
+        <!-- <div class="image-footer">
+            <p>Imagen de fundacaotelefonicavivo.org.br. Extraída el 9 nov, 2024.</p>
+        </div> -->
     </div>
     <section id="Acerca-de">
         <div id="Acerca-de-content">
@@ -45,123 +45,92 @@
         </div>
     </section>
     <div class="separator-line"></div>
-    <section id="Iniciativas-list">
-        <div class="iniciativa-container">
-            <div class="iniciativa">
-                <div class="iniciativa-text-right">
-                    <h1>Bosque Urbano Extra A. C.</h1>
-                    <p>Objetivo: Queremos donar 5 millones de árboles en los próximos 10 años. Nos dedicamos a cultivar árboles endémicos de la región de forma masiva y prepararlos para ser adoptados y plantados por toda la ciudad.<br>Existen 3 formas principales de apoyar a esta organización:</p>
-                    <p><b>1.- Adoptar un árbol:</b></p>
-                    <ul>
-                        <li>Debes llevar tu INE para adoptar. Sólo se entrega 1 árbol por INE.</li>
-                        <li>Cada uno de los árboles que entregamos llevan consigo un código QR que nos permite monitorearlos y saber dónde se encuentran, para saber cuántos árboles nos faltan para hacer de Guadalajara la ciudad más arbolada.</li>
-                    </ul>
-                    <p><b>2.- Asistir a sus talleres:</b></p>
-                    <ul>
-                        <li>La cuota para sus talleres ayuda a que el proyecto no desaparezca.</li>
-                    </ul>
-                    <p><b>3.- Donar al proyecto:</b></p>
-                    <ul>
-                        <li>Consiste en asistir directamente a colonias vulnerables de la ZMG que   presentan un alto grado de deforestación; para brindar educación ambiental y donación de árboles para apoyar a los habitantes de estas comunidades a recuperar o crear áreas verdes en su zona.</li>
-                    </ul>
-                    <div class="iniciativa-enlace" onclick="window.open('https://bosqueurbanoextra.org.mx/', '_blank')">
-                        <p><b>Sitio web de Bosque Urbano Extra A. C.:</b><br><a href="https://bosqueurbanoextra.org.mx/" target="_blank" rel="noopener noreferrer">https://bosqueurbanoextra.org.mx/</a></p>
-                    </div>
-                </div>
-                <div class="image iniciativa-image-right">
-                    <img src="images/Bosque Urbano Extra A C/Main image.jpeg" alt="Bosque Urbano Extra A. C.">
-                    <p>Imagen del Twitter oficial de Bosque Urbano Extra A. C. Extraída el 9 nov, 2024.</p>
-                </div>
+    <section class="calc-section">
+        <div class="calc-wrap calc-card">
+        <h2 class="sr-only">Calculadora de huella hídrica de áreas verdes en Guadalajara</h2>
+        <div class="progress" id="progress"></div>
+
+        <div class="step active" id="step-0">
+            <div class="step-header">Paso 1 de 4</div>
+            <div class="step-title">¿Cómo es tu pasto?</div>
+            <div class="row2">
+            <div class="field"><label>Largo (metros)</label><input type="number" id="pasto-largo" min="0" step="0.5" placeholder="ej. 6"></div>
+            <div class="field"><label>Ancho (metros)</label><input type="number" id="pasto-ancho" min="0" step="0.5" placeholder="ej. 4"></div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.019277551137!2d-103.39287792389003!3d20.709441780861223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae4cd7264c57%3A0x6801584c28a59a2d!2sVivero%20Bosque%20Urbano!5e0!3m2!1sen!2smx!4v1731516927543!5m2!1sen!2smx" width="100%" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="field">
+            <label>Tipo de pasto</label>
+            <div class="radio-grid cols3" id="tipo-pasto">
+                <label class="radio-opt selected"><input type="radio" name="pasto" value="0.90" checked> Kikuyu / bermuda</label>
+                <label class="radio-opt"><input type="radio" name="pasto" value="0.82"> San Agustín</label>
+                <label class="radio-opt"><input type="radio" name="pasto" value="0.20"> Sin pasto (0)</label>
+            </div>
+            </div>
+            <div class="btns"><span></span><button class="btn primary" onclick="goTo(1)">Siguiente</button></div>
+        </div>
+
+        <div class="step" id="step-1">
+            <div class="step-header">Paso 2 de 4</div>
+            <div class="step-title">Árboles y plantas</div>
+            <div class="row2">
+            <div class="field"><label>Árboles grandes (&gt;5 m)</label><input type="number" id="arb-g" min="0" value="0" step="1"></div>
+            <div class="field"><label>Árboles medianos (2–5 m)</label><input type="number" id="arb-m" min="0" value="0" step="1"></div>
+            </div>
+            <div class="row2">
+            <div class="field"><label>Arbustos / plantas</label><input type="number" id="arb-s" min="0" value="0" step="1"></div>
+            <div class="field"><label>Macetas</label><input type="number" id="macetas" min="0" value="0" step="1"></div>
+            </div>
+            <div class="field">
+            <label>Tipo de jardín predominante</label>
+            <div class="radio-grid" id="tipo-jardin">
+                <label class="radio-opt selected"><input type="radio" name="jardin" value="0.65" checked> Ornamental (flores, arbustos)</label>
+                <label class="radio-opt"><input type="radio" name="jardin" value="0.20"> Xerófito (cactus, suculentas)</label>
+                <label class="radio-opt"><input type="radio" name="jardin" value="0.80"> Huerto / comida</label>
+                <label class="radio-opt"><input type="radio" name="jardin" value="0.55"> Mixto</label>
+            </div>
+            </div>
+            <div class="btns">
+            <button class="btn" onclick="goTo(0)">Atrás</button>
+            <button class="btn primary" onclick="goTo(2)">Siguiente</button>
             </div>
         </div>
-        <div class="separator-line"></div>
-        <div class="iniciativa-container">
-            <div class="iniciativa">
-                <div class="image iniciativa-image-left">
-                    <img src="images/Agencia Metropolitana de bosques Urbanos de Guadalajara /Main image.jpg" alt="Agencia Metropolitana de bosques Urbanos de Guadalajara">
-                    <p>Imagen de bosquesurbanos.mx. Extraída el 13 nov, 2024.</p>
-                </div>
-                <div class="iniciativa-text-left">
-                    <h1>Agencia Metropolitana de Bosques Urbanos de Guadalajara</h1>
-                    <p>Ofrece programas de voluntariado dirigidos a empresas, instituciones educativas, y la comunidad en general, en los que puedes hacer actividades como la plantación de árboles, el mantenimiento de áreas verdes, y otras jornadas ambientales.<br><b>*</b>Es recomendable contactar directamente a las oficinas para obtener más información.</p>
-                    <div class="iniciativa-enlace" onclick="window.open('https://bosquesamg.mx/voluntariado/', '_blank')">
-                        <p><b>Sitio web de Agencia Metropolitana de bosques Urbanos de Guadalajara:</b><br><a href="https://bosquesamg.mx/voluntariado/" target="_blank" rel="noopener noreferrer">https://bosquesamg.mx/voluntariado/</a></p>
-                    </div>
-                </div>
+
+        <div class="step" id="step-2">
+            <div class="step-header">Paso 3 de 4</div>
+            <div class="step-title">Condiciones y riego</div>
+            <div class="field">
+            <label>Exposición solar del jardín</label>
+            <div class="radio-grid cols3" id="sol">
+                <label class="radio-opt selected"><input type="radio" name="sol" value="1.0" checked> Sol directo</label>
+                <label class="radio-opt"><input type="radio" name="sol" value="0.75"> Semi-sombra</label>
+                <label class="radio-opt"><input type="radio" name="sol" value="0.5"> Sombra</label>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.0731989124247!2d-103.39477562389006!3d20.707251980862885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae4d6bb439a7%3A0x5b8ee2f26d1d123e!2seeli%20gonza%C3%B1ez!5e0!3m2!1sen!2smx!4v1731516651531!5m2!1sen!2smx" width="100%" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </div>
-        <div class="separator-line"></div>
-        <div class="iniciativa-container">
-            <div class="iniciativa">
-                <div class="iniciativa-text-right">
-                    <h1>Reforestacción</h1>
-                    <p>Es una fundación que, por medio de medidas innovadoras y sostenibles, busca la conservación de bosques y áreas protegidas en Jalisco. Su principal misión es restaurar ecosistemas dañados por incendios forestales y otras actividades humanas.<br>Puedes apoyar mediante:</p>
-                    <ul>
-                        <li><b>Voluntariado:</b> Publican los voluntariados (como jornadas de reforestación y actividades comunitaria) en Facebook e Instagram.</li>
-                        <li><b>Donaciones:</b> Puedes hacer cargos mensuales o hacer un cargo único, podemos adquirir árboles y se usa el dinero cubrir los gastos asociados a los viveros y al mantenimiento de las reforestaciones.</li>
-                        <li><b>Donaciones en especies:</b> Aceptan donaciones de plantas y material de trabajo como picos, palas, carretillas, charolas de vivero, etc.</li>
-                    </ul>
-                    <div class="iniciativa-enlace" onclick="window.open('https://www.reforestaccion.org/', '_blank')">
-                        <p><b>Sitio web de Reforestacción:</b><br><a href="https://www.reforestaccion.org/" target="_blank" rel="noopener noreferrer">https://www.reforestaccion.org/</a></p>
-                    </div>
-                </div>
-                <div class="image iniciativa-image-right">
-                    <img src="images/Reforestacción/Main image.jpg" alt="Reforestacción">
-                    <p>Imagen de araucariadigital.com. Extraída el 9 nov, 2024.</p>
-                </div>
+            <div class="field">
+            <label>Sistema de riego que usas</label>
+            <div class="radio-grid" id="riego">
+                <label class="radio-opt"><input type="radio" name="riego" value="0.9"> Goteo</label>
+                <label class="radio-opt"><input type="radio" name="riego" value="0.75"> Microaspersor</label>
+                <label class="radio-opt"><input type="radio" name="riego" value="0.65"> Aspersor</label>
+                <label class="radio-opt selected"><input type="radio" name="riego" value="0.55" checked> Manguera manual</label>
+            </div>
+            </div>
+            <div class="btns">
+            <button class="btn" onclick="goTo(1)">Atrás</button>
+            <button class="btn primary" onclick="calcular()">Ver resultados</button>
             </div>
         </div>
-        <div class="separator-line"></div>
-        <div class="iniciativa-container">
-            <div class="iniciativa">
-                <div class="image iniciativa-image-left">
-                    <img src="images/Colectivo Ecologista de Jalisco/Main image.png" alt="Colectivo Ecologista de Jalisco">
-                    <p>Imagen de cej.org.mx. Extraída el 9 nov, 2024.</p>
-                </div>
-                <div class="iniciativa-text-left">
-                    <h1>Colectivo Ecologista de Jalisco</h1>
-                    <p>Es una organización que se dedica a hacer una mejoría en el medio ambiente, específicamente en la zona de Jalisco, esto tomando en cuenta los intereses de la sociedad y ayudando a que estos se hagan valer por parte de las autoridades. Este colectivo también busca la reforestación de los bosques de la zona.<br>¿Como puedes apoyarla?</p>
-                    <ul>
-                        <li><b>Unirte a Grupos Locales:</b> Puedes unirte a colectivos y organizaciones ecologistas que operan en Guadalajara, como Salvemos el Agua Jalisco o Ecología y Desarrollo Sustentable Jalisco.</li>
-                        <li><b>Voluntariado:</b> Muchas organizaciones tienen programas de voluntariado donde puedes ayudar, busca oportunidades en grupos como Cuerpo de Voluntarios por el Medio Ambiente.</li>
-                        <li><b>Donaciones:</b> Apoya económicamente a ONGs locales que trabajan en la conservación y protección del medio ambiente, como La Sagrada Tierra o Protectores del Agua Jalisco.</li>
-                        <li><b>Asistir a Talleres y Eventos:</b> Participa en ferias ambientales, talleres y conferencias organizados por colectivos ecologistas. Esto te ayudará a aprender más y a involucrarte con la comunidad.</li>
-                    </ul>
-                    <div class="iniciativa-enlace" onclick="window.open('https://www.cej.org.mx', '_blank')">
-                        <p><b>Sitio web de Colectivo Ecologista de Jalisco:</b><br><a href="https://www.cej.org.mx" target="_blank" rel="noopener noreferrer">https://www.cej.org.mx</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.722038435248!2d-103.39345132389064!3d20.680884580882847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af002d669e0d%3A0xa623a3e47fbad47!2sColectivo%20Ecologista%20Jalisco%2C%20A.C.!5e0!3m2!1sen!2smx!4v1731515101781!5m2!1sen!2smx" width="100%" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+
+        <div class="step" id="step-3">
+            <div class="step-header">Resultados</div>
+            <div class="step-title">Huella hídrica de tu jardín</div>
+            <div class="metric-grid" id="metrics"></div>
+            <div id="verdict-box"></div>
+            <hr class="section-sep">
+            <div style="font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 10px;">Litros de riego artificial necesarios por mes</div>
+            <div class="month-bars" id="bars"></div>
+            <hr class="section-sep">
+            <div class="btns"><button class="btn" onclick="goTo(0)">Recalcular</button></div>
         </div>
-        <div class="separator-line"></div>
-        <div class="iniciativa-container">
-            <div class="iniciativa">
-                <div class="iniciativa-text-right">
-                    <h1>Fundación Red de Árboles</h1>
-                    <p>Es una organización en Guadalajara enfocada en la reforestación y conservación de áreas verdes para mejorar la calidad del aire, combatir el cambio climático y promover el cuidado de los ecosistemas forestales. Además de Jalisco, tiene presencia en estados como Michoacán, Querétaro y Ciudad de México.</p>
-                    <ul>
-                        <li><b>Voluntariado:</b> En jornadas de reforestación y actividades de mantenimiento de áreas verdes.<br><a href="https://www.reddearboles.org/voluntariado" target="_blank" rel="noopener noreferrer">https://www.reddearboles.org/voluntariado</a></li>
-                        <li><b>Donaciones:</b> Monetarias o en especie (herramientas, plantas).<br><a href="https://www.reddearboles.org/donaciones" target="_blank" rel="noopener noreferrer">https://www.reddearboles.org/donaciones</a></li>
-                        <li><b>Donaciones en especies:</b> Puedes realizar una donación para apadrinar un árbol, y recibirás un certificado virtual con las coordenadas del lugar de plantación.<br><a href="https://www.reddearboles.org/es-MX/es-MX/adopta-un-arbol" target="_blank" rel="noopener noreferrer">https://www.reddearboles.org/es-MX/es-MX/adopta-un-arbol</a></li>
-                    </ul>
-                    <div class="iniciativa-enlace" onclick="window.open('https://www.reddearboles.org/es-MX/', '_blank')">
-                        <p><b>Sitio web de Fundación Red de Árboles:</b><br><a href="https://www.reddearboles.org/es-MX/" target="_blank" rel="noopener noreferrer">https://www.reddearboles.org/es-MX/</a></p>
-                    </div>
-                </div>
-                <div class="image iniciativa-image-right">
-                    <img src="images/Fundación Red de Árboles/Main image.jpg" alt="Fundación Red de Árboles">
-                    <p>Imagen de reddearboles.org. Extraída el 9 nov, 2024.</p>
-                </div>
-            </div>
         </div>
     </section>
     <footer>
@@ -171,5 +140,117 @@
             <div><img src="/images/logos/circle_flower.png" alt="Logo de Grupo Ecósfera"></div>
         </div>
     </footer>
+    <script>
+        const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        const PRECIP = [15,8,6,7,15,148,252,198,152,55,18,14];
+        const ETO    = [82,95,128,145,158,132,112,108,98,92,76,72];
+        const PE_EFF = 0.75;
+
+        let currentStep = 0;
+
+        function renderProgress(step) {
+        const p = document.getElementById('progress');
+        p.innerHTML = [0,1,2,3].map(i =>
+            `<div class="pip ${i < step ? 'done' : i === step ? 'active' : ''}"></div>`
+        ).join('');
+        }
+
+        function goTo(n) {
+        document.getElementById('step-'+currentStep).classList.remove('active');
+        currentStep = n;
+        document.getElementById('step-'+currentStep).classList.add('active');
+        renderProgress(n);
+        }
+
+        function getRadio(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? parseFloat(el.value) : 0;
+        }
+
+        function calcular() {
+        const largo = parseFloat(document.getElementById('pasto-largo').value) || 0;
+        const ancho = parseFloat(document.getElementById('pasto-ancho').value) || 0;
+        const areaPasto = largo * ancho;
+
+        const arbG = parseInt(document.getElementById('arb-g').value) || 0;
+        const arbM = parseInt(document.getElementById('arb-m').value) || 0;
+        const arbS = parseInt(document.getElementById('arb-s').value) || 0;
+        const mac  = parseInt(document.getElementById('macetas').value) || 0;
+
+        const areaArbG = arbG * 12;
+        const areaArbM = arbM * 5;
+        const areaArbS = arbS * 0.5;
+        const areaMac  = mac  * 0.08;
+        const areaPlants = areaArbG + areaArbM + areaArbS + areaMac;
+        const areaTotal = areaPasto + areaPlants;
+
+        const kcPasto  = getRadio('pasto');
+        const kcJardin = getRadio('jardin');
+        const solFactor = getRadio('sol');
+        const efRiego  = getRadio('riego');
+
+        const kcTotal = areaPasto > 0
+            ? (areaPasto * kcPasto + areaPlants * kcJardin) / (areaTotal || 1)
+            : kcJardin;
+
+        const kcEfectivo = kcTotal * solFactor;
+
+        let totalDeficit = 0;
+        const monthly = MESES.map((mes, i) => {
+            const etc = ETO[i] * kcEfectivo;
+            const pe  = PRECIP[i] * PE_EFF;
+            const deficit = Math.max(0, etc - pe);
+            const litros  = deficit * areaTotal;
+            const litrosSource = litros / efRiego;
+            totalDeficit += litrosSource;
+            return { mes, etc: Math.round(etc), pe: Math.round(pe), deficit: Math.round(deficit), litros: Math.round(litros), litrosSource: Math.round(litrosSource) };
+        });
+
+        const totalAnual = Math.round(totalDeficit);
+        const mesMax = monthly.reduce((a,b) => a.litrosSource > b.litrosSource ? a : b);
+        const mesesSinRiego = monthly.filter(m => m.litros === 0).length;
+
+        document.getElementById('metrics').innerHTML = `
+            <div class="metric"><div class="val">${areaTotal.toFixed(1)} m²</div><div class="lbl">Área verde total</div></div>
+            <div class="metric"><div class="val">${totalAnual.toLocaleString()}</div><div class="lbl">Litros/año de la fuente</div></div>
+            <div class="metric"><div class="val">${mesesSinRiego}</div><div class="lbl">Meses sin riego</div></div>
+        `;
+
+        const okColor = mesesSinRiego >= 5 ? 'ok' : 'warn';
+        const okIcon  = okColor === 'ok' ? '✓' : '!';
+        document.getElementById('verdict-box').innerHTML = `
+            <div class="verdict ${okColor}">
+            <div class="v-title">${okIcon} ${mesesSinRiego} de 12 meses no requieren riego artificial</div>
+            <div class="v-sub">El mes con mayor demanda es <strong>${mesMax.mes}</strong> con aprox. ${mesMax.litrosSource.toLocaleString()} L extraídos de la fuente. En temporada de lluvias (jun–oct) el jardín se mantiene solo.</div>
+            </div>
+        `;
+
+        const maxL = Math.max(...monthly.map(m => m.litrosSource), 1);
+        document.getElementById('bars').innerHTML = monthly.map(m => {
+            const pct = Math.round((m.litrosSource / maxL) * 100);
+            const color = m.litrosSource === 0 ? '#5DCAA5' : pct > 60 ? '#EF9F27' : '#9FE1CB';
+            const label = m.litrosSource === 0 ? 'lluvia ✓' : m.litrosSource.toLocaleString() + ' L';
+            return `<div class="bar-row">
+            <div class="bar-label">${m.mes}</div>
+            <div class="bar-track"><div class="bar-inner" style="width:${pct}%;background:${color};"></div></div>
+            <div class="bar-val">${label}</div>
+            </div>`;
+        }).join('');
+
+        goTo(3);
+        }
+
+        document.querySelectorAll('.radio-grid').forEach(grid => {
+        grid.querySelectorAll('.radio-opt').forEach(opt => {
+            opt.addEventListener('click', () => {
+            grid.querySelectorAll('.radio-opt').forEach(o => o.classList.remove('selected'));
+            opt.classList.add('selected');
+            opt.querySelector('input').checked = true;
+            });
+        });
+        });
+
+        renderProgress(0);
+    </script>
 </body>
 </html>
