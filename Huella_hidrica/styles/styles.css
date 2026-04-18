@@ -5,13 +5,11 @@
     #DCE7C9 LIGHTER
 */
 
-/* .hero-image {
-    height: 80vh;
-    position: relative;
-    background-position: center;
+.hero-image {
+    height: calc(100vh - var(--nav-height));
 }
 
-.hero-image-content {
+/* .hero-image-content {
     width: 100%;
     position: absolute;
     top: 50%;
