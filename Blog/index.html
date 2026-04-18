@@ -189,5 +189,25 @@
             <div><img src="/images/logos/circle_flower.png" alt="Logo de Grupo Ecósfera"></div>
         </div>
     </footer>
+    <script>
+        /* ── Hamburger menu ── */
+      const hamburger = document.getElementById('hamburger-btn');
+      const navMenu = document.getElementById('nav-menu');
+ 
+      hamburger.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('nav-open');
+        hamburger.classList.toggle('is-open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+ 
+      // Close menu when a nav link is clicked
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('nav-open');
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
 </body>
 </html>
