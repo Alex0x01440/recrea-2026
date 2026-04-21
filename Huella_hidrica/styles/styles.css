@@ -5,131 +5,228 @@
     #DCE7C9 LIGHTER
 */
 
+/* ── Hero: slightly shorter on this page ── */
 .hero-image {
     height: calc(60vh - var(--nav-height));
 }
 
-/* .hero-image-content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+/* ============================================================
+   INTRO SECTION (dark, before calculator)
+   ============================================================ */
+
+#hh-intro {
+    background-color: #364530;
+    padding: 72px 40px;
 }
 
-.hero-image-title {
-    letter-spacing: 0.08em;
-}
-
-.hero-image-subtitle {
-    width: 100%;
-}
-
-#Acerca-de::before {
-    content: "";
-    display: block;
-    height: 10vh;
-    margin-top: -10vh;
-} */
-
-#Acerca-de {
-    width: 100%;
-    background-color: #FBFCFA;
-}
-
-#Acerca-de-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.hh-intro-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    gap: 160px;
 }
 
-#Acerca-de h2{
-    margin: 0px;
-    font-size: 25px;
-    font-family: "Poppins", serif;
-    color: #364530;
+.hh-intro-text .section-label {
+    color: rgba(220, 231, 201, 0.6);
 }
 
-#Acerca-de p{
-    font-family: "Poppins", serif;
-    color: black;
+.hh-intro-text h2 {
+    font-family: "Slabo 27px", serif;
+    font-size: clamp(24px, 3.5vw, 38px);
+    color: #DCE7C9;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    font-weight: 400;
 }
 
-#Acerca-de .column {
+.hh-intro-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #b8c9a5;
+    margin: 0;
+}
+
+.hh-stat-strip {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column;
+    gap: 16px;
 }
 
-#Acerca-de .content {
+.hh-stat {
+    border: 1.5px solid rgba(220, 231, 201, 0.2);
+    border-radius: 4px;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.04);
+}
+
+.hh-stat-val {
+    font-family: "Slabo 27px", serif;
+    font-size: 28px;
+    color: #DCE7C9;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.hh-stat-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #b8c9a5;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.hh-stat.accent {
+    border-color: #9C0A4F;
+    background: rgba(156, 10, 79, 0.08);
+}
+
+.hh-stat.accent .hh-stat-val {
+    color: #f4a0c0;
+}
+
+/* ============================================================
+   CALCULATOR SECTION
+   ============================================================ */
+
+.calc-section {
+    padding: 80px 40px;
+    background-color: #fbfcfa;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: justify;
-    gap: 10px;
-    width: 700px;
 }
 
-#Acerca-de .content-text {
-    width: 650px;
+.calc-section > .section-label {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-#Acerca-de img {
-    width: 450px;
-    height: auto;
-    border-radius: 15px;
+.calc-section > .section-title-calc {
+    font-family: "Slabo 27px", serif;
+    font-size: clamp(26px, 3.5vw, 38px);
+    color: #364530;
+    text-align: center;
+    margin: 0 0 48px 0;
+    line-height: 1.15;
+    font-weight: 400;
 }
 
-/* Adaptación de la calculadora al estilo Ecósfera */
-.calc-section {
-    padding: 60px 20px;
-    background-color: #FBFCFA;
-    display: flex;
-    justify-content: center;
-}
-
-.calc-card {
+.calc-wrap.calc-card {
     background: white;
     width: 100%;
-    max-width: 700px;
-    padding: 40px;
-    border-radius: 20px;
-    /* Usando el estilo de sombra y bordes de tus otras secciones */
+    max-width: 680px;
+    padding: 44px;
+    border-radius: 4px;
     border: 1.5px solid #DCE7C9;
     box-shadow: 4px 4px 0px #364530;
     font-family: "Poppins", sans-serif;
 }
 
+/* Progress bar */
+.progress {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 2rem;
+}
+
+.pip { height: 4px; background: #DCE7C9; flex: 1; border-radius: 2px; }
+.pip.done { background: #9C0A4F; }
+.pip.active { background: #364530; }
+
+/* Step header + title */
 .step-header {
-    font-size: 12px;
-    color: #9C0A4F; /* Tu color de acento */
+    font-size: 11px;
+    color: #9C0A4F;
     margin-bottom: 8px;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: "Poppins", sans-serif;
 }
 
 .step-title {
     font-family: "Slabo 27px", serif;
-    font-size: 28px;
+    font-size: 26px;
     color: #364530;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
-/* Estilo para los radio buttons personalizados */
+/* Show/hide steps */
+.step { display: none; }
+.step.active { display: block; }
+
+/* Fields */
+.field { margin-bottom: 1.25rem; }
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #364530;
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.field input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 14px;
+    border: 1.5px solid #DCE7C9;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #364530;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background: #fbfcfa;
+}
+
+.field input[type="number"]:focus {
+    border-color: #364530;
+    background: #fff;
+}
+
+/* Two-column input grid */
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Radio button grid */
+.radio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.radio-grid.cols3 { grid-template-columns: 1fr 1fr 1fr; }
+
 .radio-opt {
     border: 1.5px solid #DCE7C9;
-    border-radius: 10px;
-    padding: 12px;
+    border-radius: 4px;
+    padding: 12px 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #364530;
+    line-height: 1.4;
+}
+
+.radio-opt input { display: none; }
+
+.radio-opt:hover {
+    border-color: #b8c9a5;
+    background: #f4f7ee;
 }
 
 .radio-opt.selected {
@@ -139,179 +236,119 @@
     font-weight: 600;
 }
 
-/* Barras de progreso */
-.pip { height: 4px; background: #DCE7C9; flex: 1; border-radius: 2px; }
-.pip.done { background: #9C0A4F; }
-.pip.active { background: #364530; }
-
-/* Gráficas de resultados */
-.bar-inner { background: #DCE7C9; border-radius: 4px; transition: width 1s ease-in-out; }
-.bar-inner.high-demand { background: #9C0A4F; } /* Meses de mucho riego */
-
-/* =====================
-   CALCULADORA HUELLA HÍDRICA
-   ===================== */
-
-/* El más crítico: muestra/oculta pasos */
-.step { display: none; }
-.step.active { display: block; }
-
-/* Barra de progreso (los pips ya los tienes, falta el contenedor) */
-.progress {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 2rem;
-}
-
-/* Campos del formulario */
-.field {
-    margin-bottom: 1.25rem;
-}
-.field label {
-    display: block;
-    font-size: 14px;
-    color: #364530;
-    margin-bottom: 6px;
-    font-family: "Poppins", sans-serif;
-}
-.field input[type="number"],
-.field select {
-    width: 100%;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    padding: 8px 12px;
-    border: 1.5px solid #DCE7C9;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #364530;
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-.field input[type="number"]:focus {
-    border-color: #364530;
-}
-
-/* Grid de dos columnas para pares de inputs */
-.row2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-/* Grid para radio buttons */
-.radio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-.radio-grid.cols3 {
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* Botones de navegación */
+/* Nav buttons */
 .btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
 }
+
 .btn {
-    padding: 10px 22px;
-    border-radius: 10px;
+    padding: 10px 24px;
+    border-radius: 4px;
     border: 1.5px solid #DCE7C9;
     background: transparent;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     color: #364530;
     transition: all 0.2s ease;
 }
-.btn:hover {
-    background: #DCE7C9;
-}
+
+.btn:hover { background: #DCE7C9; }
+
 .btn.primary {
     background: #364530;
     color: white;
     border-color: #364530;
-    font-weight: 600;
+    box-shadow: #9C0A4F 3px 3px 0 0;
 }
+
 .btn.primary:hover {
     background: #9C0A4F;
     border-color: #9C0A4F;
+    box-shadow: #364530 3px 3px 0 0;
 }
 
-/* Tarjetas de métricas en resultados */
+/* Results: metric cards */
 .metric-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-bottom: 1.5rem;
 }
+
 .metric {
-    background: #F4F7EE;
+    background: #fbfcfa;
     border: 1.5px solid #DCE7C9;
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 4px;
+    padding: 16px 12px;
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
+
 .metric .val {
-    font-size: 20px;
-    font-weight: 600;
+    font-family: "Slabo 27px", serif;
+    font-size: 22px;
+    font-weight: 400;
     color: #364530;
+    margin-bottom: 4px;
 }
+
 .metric .lbl {
     font-size: 12px;
     color: #666;
-    margin-top: 3px;
+    line-height: 1.4;
 }
 
-/* Cuadro de veredicto */
+/* Verdict box */
 .verdict {
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
     border: 1.5px solid;
     font-family: "Poppins", sans-serif;
 }
+
 .verdict.ok {
     background: #DCE7C9;
     border-color: #364530;
     color: #364530;
 }
+
 .verdict.warn {
     background: #faeeda;
     border-color: #9C0A4F;
     color: #4a2002;
 }
-.verdict .v-title {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-.verdict .v-sub {
-    font-size: 13px;
-    opacity: 0.85;
-}
 
-/* Barras mensuales */
+.verdict .v-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; letter-spacing: 0.02em; }
+.verdict .v-sub { font-size: 13px; line-height: 1.6; opacity: 0.85; }
+
+/* Monthly bar chart */
 .month-bars { width: 100%; }
+
 .bar-row {
     display: grid;
-    grid-template-columns: 38px 1fr 70px;
+    grid-template-columns: 38px 1fr 72px;
     align-items: center;
     gap: 8px;
     margin-bottom: 7px;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
 }
+
 .bar-track {
     background: #f0f0f0;
     border-radius: 4px;
-    height: 14px;
+    height: 12px;
     overflow: hidden;
     position: relative;
 }
+
 .bar-inner {
     height: 100%;
     border-radius: 4px;
@@ -320,134 +357,38 @@
     top: 0;
     transition: width 0.8s ease;
 }
+
 .bar-label { color: #364530; font-weight: 500; }
 .bar-val { text-align: right; font-size: 11px; color: #666; }
+.section-sep { border: none; border-top: 1.5px solid #DCE7C9; margin: 1.5rem 0; }
 
-/* Separador */
-.section-sep {
-    border: none;
-    border-top: 1.5px solid #DCE7C9;
-    margin: 1.5rem 0;
-}
-
-/* Accesibilidad: oculta texto solo para lectores de pantalla */
+/* SR-only */
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
+    width: 1px; height: 1px;
+    padding: 0; overflow: hidden;
     clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
+    white-space: nowrap; border: 0;
 }
 
-.separator-line::before {
-    content: "";
-    position: absolute;
-    text-align: center;
-    left: 10%;
-    width: 80%;
-    height: 3px;
-    background-color: #5A6D7F;
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+    .hh-intro-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    #hh-intro { padding: 60px 24px; }
 }
 
-#Iniciativas-list {
-    text-align: justify;
+@media (max-width: 600px) {
+    .calc-section { padding: 60px 20px; }
+    .calc-wrap.calc-card { padding: 28px 20px; }
+    .metric-grid { grid-template-columns: 1fr 1fr; }
+    .radio-grid.cols3 { grid-template-columns: 1fr 1fr; }
+    .row2 { grid-template-columns: 1fr; }
 }
 
-#Iniciativas-list h1 {
-    letter-spacing: 0.1em;
-    color: #26312A;
-    font-family: "Slabo 27px", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 45px;
-    margin: 0;
-}
-
-#Iniciativas-list p {
-    letter-spacing: 0.01em;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#Iniciativas-list ul li {
-    letter-spacing: 0.01em;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#Iniciativas-list .image p {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.65em;
-    margin: 0;
-}
-
-.iniciativa-container {
-    width: 100%;
-}
-
-.iniciativa-container .map {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 30px;
-}
-
-.iniciativa {
-    padding: 30px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-
-.iniciativa .iniciativa-enlace {
-    border-radius: 5px;
-    padding: 5px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.iniciativa .iniciativa-enlace a {
-    transition: all 0.3s ease;
-}
-
-.iniciativa .iniciativa-enlace:hover {
-    color: white;
-    background-color: #9C0A4F;
-}
-
-.iniciativa .iniciativa-enlace:hover a {
-    color: white;
-}
-
-.iniciativa-text-right {
-    max-width: 50%;
-    margin-right: auto;
-}
-
-.iniciativa-image-right img {
-    width: 680px;
-    border-radius: 20px;
-    margin-left: auto;
-}
-
-.iniciativa-text-left {
-    max-width: 50%;
-    margin-left: auto;
-}
-
-.iniciativa-text-left h1 {
-    text-align: right;
-}
-
-.iniciativa-image-left img {
-    width: 680px;
-    border-radius: 20px;
-    margin-right: auto;
+@media (max-width: 400px) {
+    .metric-grid { grid-template-columns: 1fr; }
+    .radio-grid { grid-template-columns: 1fr 1fr; }
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Blog - EcoRed ZMG</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Jardín Communitas - Grupo Ecósfera</title>
     <link rel="icon" href="/favicon/favicon48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="/favicon/favicon32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/favicon/favicon64.png" sizes="64x64" type="image/png">
@@ -27,161 +27,289 @@
             <li><a href="https://www.instagram.com/grupo_ecosfera/" target="_blank" rel="noopener noreferrer"><button class="button-75">SÍGUENOS</button></a></li>
         </ul>
     </div>
-    <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Hero\ image/hero_img.JPG);">
+
+    <!-- 1. HERO -->
+    <div class="hero-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/Hero\ image/hero_img.JPG);">
         <div class="hero-image-content">
             <div class="hero-image-title">Jardín Communitas</div>
             <div class="hero-image-subtitle">MANUAL DE ECO-RESISTENCIA URBANA</div>
-            <!-- <button class="button-74" onclick="location.href='#Acerca-de'">CONOCER MÁS</button> -->
         </div>
-        <!-- <div class="image-footer">
-            <p>Imagen de fundacaotelefonicavivo.org.br. Extraída el 9 nov, 2024.</p>
-        </div> -->
     </div>
-    <section id="Acerca-de">
-        <div id="Acerca-de-content">
-            <div class="column-container">
-                <div class="content">
-                    <h2>¿Cómo puedo aportar al cambio en mi día a día?</h2>
-                    <div class="content-text">
-                        <p>Hay muchas maneras de ser una figura de apoyo para el cambio. Presentamos formas amigables con la vida común de colocar un granito de arena propio de cada individuo.<br>En esta sección se encuentran alternativas, prácticas y convenientes, sustentables a acciones del día a día. Además de espacios de información para las personas más interesadas.</p>
-                    </div>
-                </div>
-            </div>
+
+    <!-- 2. INTRO -->
+    <section id="blog-intro">
+        <div class="blog-intro-inner">
+            <p class="intro-eyebrow">EL PROYECTO</p>
+            <h2 class="intro-heading">Esto es el registro de cómo lo hicimos.</h2>
+            <p class="intro-body">Aquí encontrarás la bitácora real de nuestro jardín: las sesiones de trabajo, los errores, los avances. Y también el manual para que tú puedas replicarlo. Porque un jardín nativo es más poderoso cuando deja de ser uno solo.</p>
         </div>
     </section>
-    <!-- <section id="Sobre-nosotros">
-        <h1>Mercados ecológicos</h1>
-        <div class="Sobre-nosotros-content">
-            <div class="content">
-                <div class="column" onclick="window.location.href='Entradas/Feria%20de%20Productores/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
+
+    <!-- 3. BITÁCORA -->
+    <!-- <section id="bitacora">
+        <div class="section-inner">
+            <div class="section-label">BITÁCORA DEL PROYECTO</div>
+            <h2 class="section-title">Lo que hicimos, paso a paso.</h2>
+
+            <div class="bitacora-grid">
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/jul-2025.jpg" alt="Documentos iniciales" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>JUL</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Julio 2025</span>
+                        <h3 class="card-title">El proyecto empieza en papel</h3>
+                        <p class="card-text">Redactamos la propuesta estudiantil formal y elaboramos una tabla comparativa de especies nativas de Jalisco: riego, crecimiento, tipo de suelo, iluminación y costo.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/ago-2025.jpg" alt="Reunión con directivos" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>AGO</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Agosto 2025</span>
+                        <h3 class="card-title">Nos sentamos con los que mandan</h3>
+                        <p class="card-text">Presentamos la propuesta a la dirección de Prepa ITESO y al departamento de Jardinería. Nos asignaron 110 m² en el Edificio Poniente. El espacio, conseguido.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/sep-2025.jpg" alt="Inauguración colectivo" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>SEP</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Septiembre 2025</span>
+                        <h3 class="card-title">Nace el Colectivo Botánica Prepa ITESO</h3>
+                        <p class="card-text">Presentamos la propuesta final de escuela participativa. Elaboramos el marco teórico y metodología. Se inauguró el colectivo estudiantil que le daría vida al jardín.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/oct-2025.jpg" alt="Muestras de suelo" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>OCT</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Octubre — Noviembre 2025</span>
+                        <h3 class="card-title">El suelo tiene su propio idioma</h3>
+                        <p class="card-text">Dividimos el terreno en cuadrantes y tomamos muestras. Dos prácticas de laboratorio: textura, infiltración, materia orgánica. El suelo resultó franco arcilloso — ideal para flora nativa jalisciense.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/dic-2025.jpg" alt="Rehabilitación del suelo" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>DIC</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Diciembre 2025 — Enero 2026</span>
+                        <h3 class="card-title">Rehabilitando la tierra</h3>
+                        <p class="card-text">Identificamos las especies disponibles. Dos rondas de sesiones de trabajo: removimos piedras, hierba y basura. Colocamos elementos abióticos (piedras, aserrín) según los resultados del laboratorio. Propuesta final del diseño aprobada.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/feb-2026.jpg" alt="Plantado de agaves" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>FEB</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Febrero 2026</span>
+                        <h3 class="card-title">Las manos en la tierra</h3>
+                        <p class="card-text">Iniciaron las sesiones del colectivo estudiantil. Se plantaron los primeros agaves. En paralelo, comenzamos a registrar avistamientos de aves con eBird y Merlín: 10 especies en promedio.</p>
+                    </div>
+                </article>
+
+                <article class="bitacora-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bitacora/mar-2026.jpg" alt="Plantado de pitahayas" onerror="this.parentElement.classList.add('no-img')">
+                        <div class="card-img-placeholder"><span>MAR</span></div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-date">Marzo 2026</span>
+                        <h3 class="card-title">34 plantas. El jardín existe.</h3>
+                        <p class="card-text">Plantamos los 20 brotes de pitahaya. Se elaboró el plan de mantenimiento por cuadrante, integrado al currículum de Formación Ignaciana. El jardín quedó a disposición de toda la comunidad del ITESO.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 4. GUÍA PARA REPLICAR -->
+    <!-- <section id="guia">
+        <div class="section-inner">
+            <div class="section-label">GUÍA PARA REPLICAR</div>
+            <h2 class="section-title">Cómo hacer tu propio jardín nativo.</h2>
+
+            <div class="replication-note">
+                <span class="note-icon">📍</span>
+                <p>Este modelo está diseñado para la ZMG: suelo franco arcilloso, clima semicálido semihúmedo, precipitación media anual de 998 mm. Si estás dentro de la zona, las condiciones son prácticamente las mismas.</p>
+            </div>
+
+            <div class="steps-list">
+
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-img-wrap">
+                            <img src="images/guia/paso1.jpg" alt="Planear y vincularse" onerror="this.parentElement.classList.add('no-img')">
+                            <div class="step-img-placeholder">FOTO</div>
                         </div>
-                        <img src="images/Mercados ecologicos/Feria de productores.jpg">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de tripadvisor.com.</p>
-                    </div>
-                    <div class="name">
-                        <p>FERIA DE PRODUCTORES</p>
+                        <div class="step-text">
+                            <h3>Planea y vincula a quienes tienen el espacio</h3>
+                            <p>Identifica un espacio disponible y habla con quienes lo administran. Prepara una propuesta concreta: qué vas a plantar, por qué, y cómo lo vas a mantener. Incluye una tabla de especies candidatas con sus requerimientos. No pidas permiso genérico — presenta un plan.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="column" onclick="window.location.href='Entradas/Mercadito%20Flor%20de%20Luna/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-img-wrap">
+                            <img src="images/guia/paso2.jpg" alt="Evaluar el suelo" onerror="this.parentElement.classList.add('no-img')">
+                            <div class="step-img-placeholder">FOTO</div>
                         </div>
-                        <img src="images/Mercados ecologicos/Mercadito flor de luna.png">
-                    </div>
-                    <div class="image-ref">
-                        <p>Fotografía por Ximena Torres.</p>
-                    </div>
-                    <div class="name">
-                        <p>MERCADITO "FLOR DE LUNA"</p>
+                        <div class="step-text">
+                            <h3>Evalúa tu suelo antes de sembrar</h3>
+                            <p>Toma muestras por cuadrante y llévalas a un laboratorio. Las pruebas clave son: textura (arcilla / limo / arena), infiltración y presencia de materia orgánica. Esto define qué plantas van dónde, y si necesitas enmendar el terreno antes de sembrar.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="column" onclick="window.location.href='Entradas/Tianguis%20del%20Recycle/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-img-wrap">
+                            <img src="images/guia/paso3.jpg" alt="Rehabilitar el terreno" onerror="this.parentElement.classList.add('no-img')">
+                            <div class="step-img-placeholder">FOTO</div>
                         </div>
-                        <img src="images/Mercados ecologicos/Tianguis recycle.jpg">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de facebook.com/tianguisdelrecycle.</p>
-                    </div>
-                    <div class="name">
-                        <p>TIANGUIS "DEL RECYCLE"</p>
+                        <div class="step-text">
+                            <h3>Rehabilita el terreno</h3>
+                            <p>Retira piedras, escombros y maleza. Según los resultados del laboratorio, incorpora elementos abióticos: aserrín para mejorar aireación, piedras para retención de calor, etc. Esta etapa tarda más de lo que crees — planifica al menos dos sesiones de trabajo colectivo.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="column" onclick="window.location.href='Entradas/Bazar%20Casa-Cem/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
+
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-img-wrap">
+                            <img src="images/guia/paso4.jpg" alt="Sembrar" onerror="this.parentElement.classList.add('no-img')">
+                            <div class="step-img-placeholder">FOTO</div>
                         </div>
-                        <img src="images/Mercados ecologicos/Casa cem.png">
+                        <div class="step-text">
+                            <h3>Siembra con criterio, no al azar</h3>
+                            <p>Asigna cada especie a su cuadrante según exposición solar, humedad y espacio disponible. Haz las cavidades del tamaño correcto, ancla bien las raíces y cubre con la tierra removida. Para los agaves, el costo fue mínimo: el jardín completo (34 plantas, 110 m²) costó <strong>$3,122 MXN</strong>.</p>
+                        </div>
                     </div>
-                    <div class="image-ref">
-                        <p>Imagen de casacem.com.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-img-wrap">
+                            <img src="images/guia/paso5.jpg" alt="Mantener y abrir a la comunidad" onerror="this.parentElement.classList.add('no-img')">
+                            <div class="step-img-placeholder">FOTO</div>
+                        </div>
+                        <div class="step-text">
+                            <h3>Mantén — y abre el jardín a tu comunidad</h3>
+                            <p>Crea un plan de mantenimiento por cuadrante: frecuencia de riego, limpieza del suelo, señales de alerta por planta. Comparte ese plan con más personas. Nosotros lo integramos al currículum escolar: los alumnos de tercer año cuidan el jardín como parte de su materia. El jardín vive si lo cuidan varios.</p>
+                        </div>
                     </div>
-                    <div class="name-casa-cem">
-                        <p>BAZAR ECO-SUSTENTABLE "CASA CEM"</p>
-                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 5. NÚMEROS QUE HABLAN -->
+    <!-- <section id="numeros">
+        <div class="section-inner">
+            <div class="section-label">LOS NÚMEROS</div>
+            <h2 class="section-title">Lo que logramos, en concreto.</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val">110 m²</div>
+                    <div class="stat-label">de jardín nativo en Prepa ITESO</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">34</div>
+                    <div class="stat-label">plantas nativas sembradas</div>
+                </div>
+                <div class="stat-card accent">
+                    <div class="stat-val">8 L</div>
+                    <div class="stat-label">por semana en temporada árida</div>
+                    <div class="stat-compare">vs. 5,390 L que necesitaría el mismo espacio en pasto</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">10 → 16</div>
+                    <div class="stat-label">especies de aves observadas (feb → abr)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">$3,122</div>
+                    <div class="stat-label">MXN — costo total de implementación</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">19.5 / 20</div>
+                    <div class="stat-label">calificación promedio en evaluación de impacto</div>
                 </div>
             </div>
         </div>
     </section> -->
-    <!-- <section id="Sobre-nosotros">
-        <h1>Alternativas de movilidad</h1>
-        <div class="Sobre-nosotros-content">
-            <div class="content">
-                <div class="column" onclick="window.location.href='Entradas/Mi%20Bici/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
-                        </div>
-                        <img src="images/Alternativas de movilidad/Mi bici.jpg">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de pasajero7.com.</p>
-                    </div>
-                    <div class="name">
-                        <p>MI BICI</p>
-                    </div>
-                </div>
-                <div class="column" onclick="window.location.href='Entradas/Via%20RecreActiva/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
-                        </div>
-                        <img src="images/Alternativas de movilidad/La via recreactiva.jpeg">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de viarecreactiva.com.</p>
-                    </div>
-                    <div class="name">
-                        <p>VIA RECREACTIVA</p>
-                    </div>
-                </div>
+
+    <!-- 6. CTA CALCULADORA -->
+    <!-- <section id="cta-calculadora">
+        <div class="cta-inner">
+            <div class="cta-text">
+                <p class="cta-eyebrow">ANTES DE SEMBRAR</p>
+                <h2>¿Cuánta agua necesitará tu jardín?</h2>
+                <p>Nuestra calculadora usa datos reales de precipitación y evapotranspiración en la ZMG para decirte cuántos litros de riego artificial necesitarás mes a mes — y en qué época el jardín se sostiene solo.</p>
+                <a href="/Huella_hidrica/" class="button-75 cta-btn">CALCULAR MI HUELLA HÍDRICA</a>
+            </div>
+            <div class="cta-decoration" aria-hidden="true">
+                <div class="deco-circle"></div>
+                <div class="deco-text">998 mm/año · ZMG</div>
             </div>
         </div>
     </section> -->
-    <!-- <section id="Sobre-nosotros">
-        <h1>Otras iniciativas</h1>
-        <div class="Sobre-nosotros-content">
-            <div class="content">
-                <div class="column" onclick="window.location.href='Entradas/Buscadores%20ecologicos/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
-                        </div>
-                        <img src="images/Otras iniciativas/Buscadores ecologicos.png">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de jetcomputer.net/blog.</p>
-                    </div>
-                    <div class="name">
-                        <p>BUSCADORES ECOLÓGICOS</p>
-                    </div>
+
+    <!-- 7. GALERÍA -->
+    <section id="galeria">
+        <!-- <div class="section-inner">
+            <div class="section-label">GALERÍA</div>
+            <h2 class="section-title">El Jardín Communitas en imágenes.</h2>
+            <p class="galeria-hint">Las fotos se cargan automáticamente desde la carpeta <code>Blog/gallery/</code>. Nómbralas <code>001.jpg</code>, <code>002.jpg</code>… en el orden en que quieras que aparezcan.</p>
+
+            <div id="gallery-grid" class="gallery-grid">
+                <div class="gallery-loading" id="gallery-loading">
+                    <span class="loading-dot"></span>
+                    <span class="loading-dot"></span>
+                    <span class="loading-dot"></span>
                 </div>
-                <div class="column" onclick="window.location.href='Entradas/Fashion%20Revolution/'">
-                    <div class="frame">
-                        <div class="role">
-                            <p>CONOCER MÁS...</p>
-                        </div>
-                        <img src="images/Otras iniciativas/Fashion Revolution.png">
-                    </div>
-                    <div class="image-ref">
-                        <p>Imagen de coolhuntermx.com.</p>
-                    </div>
-                    <div class="name">
-                        <p>TALLERES "FASHION REVOLUTION"</p>
-                    </div>
+                <div class="gallery-empty" id="gallery-empty" style="display:none;">
+                    <p>Coloca tus fotos en <code>Blog/gallery/</code> nombradas <code>001.jpg</code>, <code>002.jpg</code>, etc. para que aparezcan aquí automáticamente.</p>
                 </div>
             </div>
-        </div>
-    </section> -->
+        </div> -->
+
+        <!-- LIGHTBOX -->
+        <!-- <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+            <button class="lb-close" id="lb-close" aria-label="Cerrar">&#10005;</button>
+            <button class="lb-prev" id="lb-prev" aria-label="Anterior">&#8592;</button>
+            <button class="lb-next" id="lb-next" aria-label="Siguiente">&#8594;</button>
+            <div class="lb-img-wrap">
+                <img id="lb-img" src="" alt="Foto del jardín">
+            </div>
+            <div class="lb-counter" id="lb-counter"></div>
+        </div> -->
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-title">GRUPO ECÓSFERA</div>
@@ -189,25 +317,158 @@
             <div><img src="/images/logos/circle_flower.png" alt="Logo de Grupo Ecósfera"></div>
         </div>
     </footer>
+
     <script>
         /* ── Hamburger menu ── */
-      const hamburger = document.getElementById('hamburger-btn');
-      const navMenu = document.getElementById('nav-menu');
- 
-      hamburger.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('nav-open');
-        hamburger.classList.toggle('is-open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
-      });
- 
-      // Close menu when a nav link is clicked
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('nav-open');
-          hamburger.classList.remove('is-open');
-          hamburger.setAttribute('aria-expanded', 'false');
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('nav-open');
+            hamburger.classList.toggle('is-open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
         });
-      });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        /* ── Auto-loading gallery ──
+           Looks for images in Blog/gallery/ named 001.jpg, 002.jpg, …
+           Tries .jpg, .jpeg, .png and .webp for each index.
+           Stops after 3 consecutive misses so it doesn't run forever.
+           ─────────────────────────────────────────────────────────── */
+        const GALLERY_FOLDER   = 'gallery/';
+        const EXTENSIONS       = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG', 'WEBP'];
+        const MAX_INDEX        = 200;   // hard stop
+        const MAX_MISSES       = 3;     // consecutive fails before giving up
+
+        let galleryImages = [];   // { src, index } array, populated after load
+        let lbCurrent = 0;
+
+        function tryLoad(src) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload  = () => resolve(src);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+        }
+
+        async function loadGalleryImages() {
+            const loading = document.getElementById('gallery-loading');
+            const empty   = document.getElementById('gallery-empty');
+            const grid    = document.getElementById('gallery-grid');
+            const found   = [];
+            let misses = 0;
+
+            for (let i = 1; i <= MAX_INDEX && misses < MAX_MISSES; i++) {
+                const num = String(i).padStart(3, '0');
+                let loaded = null;
+                for (const ext of EXTENSIONS) {
+                    loaded = await tryLoad(`${GALLERY_FOLDER}${num}.${ext}`);
+                    if (loaded) break;
+                }
+                if (loaded) {
+                    misses = 0;
+                    found.push(loaded);
+                    // Add card to DOM immediately as each image resolves
+                    const card = buildGalleryCard(loaded, found.length - 1);
+                    if (loading.parentNode === grid) {
+                        grid.insertBefore(card, loading);
+                    } else {
+                        grid.appendChild(card);
+                    }
+                } else {
+                    misses++;
+                }
+            }
+
+            loading.remove();
+            galleryImages = found;
+
+            if (found.length === 0) {
+                empty.style.display = 'flex';
+            }
+        }
+
+        function buildGalleryCard(src, index) {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('role', 'button');
+            item.setAttribute('aria-label', `Ver foto ${index + 1}`);
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Foto del Jardín Communitas ${index + 1}`;
+            img.loading = 'lazy';
+
+            const overlay = document.createElement('div');
+            overlay.className = 'gallery-overlay';
+            overlay.innerHTML = '<i class="fa fa-search-plus"></i>';
+
+            item.appendChild(img);
+            item.appendChild(overlay);
+            item.addEventListener('click', () => openLightbox(index));
+            item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox(index); });
+
+            return item;
+        }
+
+        /* ── Lightbox ── */
+        function openLightbox(index) {
+            lbCurrent = index;
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lb-img').src = galleryImages[lbCurrent];
+            updateLbCounter();
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('lb-close').focus();
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function lbMove(dir) {
+            lbCurrent = (lbCurrent + dir + galleryImages.length) % galleryImages.length;
+            document.getElementById('lb-img').src = galleryImages[lbCurrent];
+            updateLbCounter();
+        }
+
+        function updateLbCounter() {
+            document.getElementById('lb-counter').textContent = `${lbCurrent + 1} / ${galleryImages.length}`;
+        }
+
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', () => lbMove(-1));
+        document.getElementById('lb-next').addEventListener('click', () => lbMove(1));
+        document.getElementById('lightbox').addEventListener('click', e => {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        });
+        document.addEventListener('keydown', e => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape')      closeLightbox();
+            if (e.key === 'ArrowLeft')   lbMove(-1);
+            if (e.key === 'ArrowRight')  lbMove(1);
+        });
+
+        // Touch swipe for lightbox
+        let lbTouchX = 0;
+        document.getElementById('lightbox').addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+        document.getElementById('lightbox').addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - lbTouchX;
+            if (dx < -50) lbMove(1);
+            if (dx > 50)  lbMove(-1);
+        });
+
+        // Start gallery load
+        loadGalleryImages();
     </script>
 </body>
 </html>

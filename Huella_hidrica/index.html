@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>Iniciativas - EcoRed ZMG</title>
+    <title>Huella Hídrica — Grupo Ecósfera</title>
     <link rel="icon" href="/favicon/favicon48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="/favicon/favicon32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/favicon/favicon64.png" sizes="64x64" type="image/png">
@@ -16,9 +16,7 @@
     <div id="top-navigation-bar">
         <a href="/#"><img src="/images/logos/twolines_transparent.png" alt="Logo de Grupo Ecósfera"></a>
         <button id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
         <ul id="nav-menu">
             <li><a href="/">INICIATIVA</a></li>
@@ -27,117 +25,133 @@
             <li><a href="https://www.instagram.com/grupo_ecosfera/" target="_blank" rel="noopener noreferrer"><button class="button-75">SÍGUENOS</button></a></li>
         </ul>
     </div>
-    <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/hero-image/hero-image.png);">
+
+    <!-- Hero -->
+    <div class="hero-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/hero-image/hero-image.png);">
         <div class="hero-image-content">
             <div class="hero-image-title">Huella hídrica</div>
-            <div class="hero-image-subtitle">¿CUÁL ES EL GASTO DE AGUA DE TUS ÁREAS VERDES?</div>
-            <!-- <button class="button-74" onclick="location.href='#Acerca-de'">CONOCER MÁS</button> -->
+            <div class="hero-image-subtitle">¿CUÁNTA AGUA CONSUMEN TUS ÁREAS VERDES?</div>
         </div>
-        <!-- <div class="image-footer">
-            <p>Imagen de fundacaotelefonicavivo.org.br. Extraída el 9 nov, 2024.</p>
-        </div> -->
     </div>
-    <!-- <section id="Acerca-de">
-        <div id="Acerca-de-content">
-            <div class="column-container">
-                <div class="content">
-                    <h2>¿Por qué conocer las iniciativas existentes en la Zona Metropolitana de Guadalajara?</h2>
-                    <div class="content-text">
-                        <p>En la Zona Metropolitana de Guadalajara existen múltiples iniciativas ambientales en las que, como ciudadanos y, desde el voluntariado y altruismo, podemos participar.<br>Haciendo esto apoyamos a la conservacion de nuestros espacios naturales y comúnes, además apoyamos la conservacion de espacios culturales en la Zona Metropolitana de Guadalajara.</p>
-                    </div>
+
+    <!-- Intro: el problema -->
+    <section id="hh-intro">
+        <div class="hh-intro-inner">
+            <div class="hh-intro-text">
+                <div class="section-label">EL PROBLEMA</div>
+                <h2>El pasto al que estamos tan acostumbrados consume mucho más agua de lo que imaginamos.</h2>
+                <p>El paisajismo urbano tradicional en Jalisco introduce especies no nativas que requieren riego artificial constante. El pasto San Agustín, presente en escuelas, parques y camellones, no es el único problema: también desplaza polinizadores, empobrece el suelo y genera una deuda hídrica que pagamos todos. Esta calculadora te ayuda a dimensionar ese gasto — y a imaginar una alternativa.</p>
+            </div>
+            <div class="hh-stat-strip">
+                <div class="hh-stat accent">
+                    <div class="hh-stat-val">7 L/m²/día</div>
+                    <div class="hh-stat-label">consumo de riego de pasto en el ITESO, según jardinería del campus</div>
+                </div>
+                <div class="hh-stat">
+                    <div class="hh-stat-val">1,470,000 L/día</div>
+                    <div class="hh-stat-label">volumen total de agua para regar el pasto del campus ITESO</div>
+                </div>
+                <div class="hh-stat">
+                    <div class="hh-stat-val">8 L/semana</div>
+                    <div class="hh-stat-label">lo que necesita el Jardín Communitas (110 m²) en temporada árida — contra 5,390 L de pasto equivalente</div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="separator-line"></div> -->
+
+    <!-- Calculadora -->
     <section class="calc-section">
+        <div class="section-label">HERRAMIENTA</div>
+        <div class="section-title-calc">Calcula la huella hídrica de tus áreas verdes</div>
+
         <div class="calc-wrap calc-card">
-        <h2 class="sr-only">Calculadora de huella hídrica de áreas verdes en Guadalajara</h2>
-        <div class="progress" id="progress"></div>
+            <h2 class="sr-only">Calculadora de huella hídrica de áreas verdes en Guadalajara</h2>
+            <div class="progress" id="progress"></div>
 
-        <div class="step active" id="step-0">
-            <div class="step-header">Paso 1 de 4</div>
-            <div class="step-title">¿Cómo es tu pasto?</div>
-            <div class="row2">
-            <div class="field"><label>Largo (metros)</label><input type="number" id="pasto-largo" min="0" step="0.5" placeholder="ej. 6"></div>
-            <div class="field"><label>Ancho (metros)</label><input type="number" id="pasto-ancho" min="0" step="0.5" placeholder="ej. 4"></div>
+            <div class="step active" id="step-0">
+                <div class="step-header">Paso 1 de 3</div>
+                <div class="step-title">¿Cómo es tu pasto?</div>
+                <div class="row2">
+                    <div class="field"><label>Largo (metros)</label><input type="number" id="pasto-largo" min="0" step="0.5" placeholder="ej. 6"></div>
+                    <div class="field"><label>Ancho (metros)</label><input type="number" id="pasto-ancho" min="0" step="0.5" placeholder="ej. 4"></div>
+                </div>
+                <div class="field">
+                    <label>Tipo de pasto</label>
+                    <div class="radio-grid cols3" id="tipo-pasto">
+                        <label class="radio-opt selected"><input type="radio" name="pasto" value="0.90" checked> Kikuyu / bermuda</label>
+                        <label class="radio-opt"><input type="radio" name="pasto" value="0.82"> San Agustín</label>
+                        <label class="radio-opt"><input type="radio" name="pasto" value="0.20"> Sin pasto</label>
+                    </div>
+                </div>
+                <div class="btns"><span></span><button class="btn primary" onclick="goTo(1)">Siguiente</button></div>
             </div>
-            <div class="field">
-            <label>Tipo de pasto</label>
-            <div class="radio-grid cols3" id="tipo-pasto">
-                <label class="radio-opt selected"><input type="radio" name="pasto" value="0.90" checked> Kikuyu / bermuda</label>
-                <label class="radio-opt"><input type="radio" name="pasto" value="0.82"> San Agustín</label>
-                <label class="radio-opt"><input type="radio" name="pasto" value="0.20"> Sin pasto (0)</label>
-            </div>
-            </div>
-            <div class="btns"><span></span><button class="btn primary" onclick="goTo(1)">Siguiente</button></div>
-        </div>
 
-        <div class="step" id="step-1">
-            <div class="step-header">Paso 2 de 4</div>
-            <div class="step-title">Árboles y plantas</div>
-            <div class="row2">
-            <div class="field"><label>Árboles grandes (&gt;5 m)</label><input type="number" id="arb-g" min="0" value="0" step="1"></div>
-            <div class="field"><label>Árboles medianos (2–5 m)</label><input type="number" id="arb-m" min="0" value="0" step="1"></div>
+            <div class="step" id="step-1">
+                <div class="step-header">Paso 2 de 3</div>
+                <div class="step-title">Árboles y plantas</div>
+                <div class="row2">
+                    <div class="field"><label>Árboles grandes (&gt;5 m)</label><input type="number" id="arb-g" min="0" value="0" step="1"></div>
+                    <div class="field"><label>Árboles medianos (2–5 m)</label><input type="number" id="arb-m" min="0" value="0" step="1"></div>
+                </div>
+                <div class="row2">
+                    <div class="field"><label>Arbustos / plantas</label><input type="number" id="arb-s" min="0" value="0" step="1"></div>
+                    <div class="field"><label>Macetas</label><input type="number" id="macetas" min="0" value="0" step="1"></div>
+                </div>
+                <div class="field">
+                    <label>Tipo de jardín predominante</label>
+                    <div class="radio-grid" id="tipo-jardin">
+                        <label class="radio-opt selected"><input type="radio" name="jardin" value="0.65" checked> Ornamental (flores, arbustos)</label>
+                        <label class="radio-opt"><input type="radio" name="jardin" value="0.20"> Xerófito (cactus, suculentas)</label>
+                        <label class="radio-opt"><input type="radio" name="jardin" value="0.80"> Huerto / comida</label>
+                        <label class="radio-opt"><input type="radio" name="jardin" value="0.55"> Mixto</label>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn" onclick="goTo(0)">Atrás</button>
+                    <button class="btn primary" onclick="goTo(2)">Siguiente</button>
+                </div>
             </div>
-            <div class="row2">
-            <div class="field"><label>Arbustos / plantas</label><input type="number" id="arb-s" min="0" value="0" step="1"></div>
-            <div class="field"><label>Macetas</label><input type="number" id="macetas" min="0" value="0" step="1"></div>
-            </div>
-            <div class="field">
-            <label>Tipo de jardín predominante</label>
-            <div class="radio-grid" id="tipo-jardin">
-                <label class="radio-opt selected"><input type="radio" name="jardin" value="0.65" checked> Ornamental (flores, arbustos)</label>
-                <label class="radio-opt"><input type="radio" name="jardin" value="0.20"> Xerófito (cactus, suculentas)</label>
-                <label class="radio-opt"><input type="radio" name="jardin" value="0.80"> Huerto / comida</label>
-                <label class="radio-opt"><input type="radio" name="jardin" value="0.55"> Mixto</label>
-            </div>
-            </div>
-            <div class="btns">
-            <button class="btn" onclick="goTo(0)">Atrás</button>
-            <button class="btn primary" onclick="goTo(2)">Siguiente</button>
-            </div>
-        </div>
 
-        <div class="step" id="step-2">
-            <div class="step-header">Paso 3 de 4</div>
-            <div class="step-title">Condiciones y riego</div>
-            <div class="field">
-            <label>Exposición solar del jardín</label>
-            <div class="radio-grid cols3" id="sol">
-                <label class="radio-opt selected"><input type="radio" name="sol" value="1.0" checked> Sol directo</label>
-                <label class="radio-opt"><input type="radio" name="sol" value="0.75"> Semi-sombra</label>
-                <label class="radio-opt"><input type="radio" name="sol" value="0.5"> Sombra</label>
+            <div class="step" id="step-2">
+                <div class="step-header">Paso 3 de 3</div>
+                <div class="step-title">Condiciones y riego</div>
+                <div class="field">
+                    <label>Exposición solar del jardín</label>
+                    <div class="radio-grid cols3" id="sol">
+                        <label class="radio-opt selected"><input type="radio" name="sol" value="1.0" checked> Sol directo</label>
+                        <label class="radio-opt"><input type="radio" name="sol" value="0.75"> Semi-sombra</label>
+                        <label class="radio-opt"><input type="radio" name="sol" value="0.5"> Sombra</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Sistema de riego que usas</label>
+                    <div class="radio-grid" id="riego">
+                        <label class="radio-opt"><input type="radio" name="riego" value="0.9"> Goteo</label>
+                        <label class="radio-opt"><input type="radio" name="riego" value="0.75"> Microaspersor</label>
+                        <label class="radio-opt"><input type="radio" name="riego" value="0.65"> Aspersor</label>
+                        <label class="radio-opt selected"><input type="radio" name="riego" value="0.55" checked> Manguera manual</label>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn" onclick="goTo(1)">Atrás</button>
+                    <button class="btn primary" onclick="calcular()">Ver resultados</button>
+                </div>
             </div>
-            </div>
-            <div class="field">
-            <label>Sistema de riego que usas</label>
-            <div class="radio-grid" id="riego">
-                <label class="radio-opt"><input type="radio" name="riego" value="0.9"> Goteo</label>
-                <label class="radio-opt"><input type="radio" name="riego" value="0.75"> Microaspersor</label>
-                <label class="radio-opt"><input type="radio" name="riego" value="0.65"> Aspersor</label>
-                <label class="radio-opt selected"><input type="radio" name="riego" value="0.55" checked> Manguera manual</label>
-            </div>
-            </div>
-            <div class="btns">
-            <button class="btn" onclick="goTo(1)">Atrás</button>
-            <button class="btn primary" onclick="calcular()">Ver resultados</button>
-            </div>
-        </div>
 
-        <div class="step" id="step-3">
-            <div class="step-header">Resultados</div>
-            <div class="step-title">Huella hídrica de tu jardín</div>
-            <div class="metric-grid" id="metrics"></div>
-            <div id="verdict-box"></div>
-            <hr class="section-sep">
-            <div style="font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 10px;">Litros de riego artificial necesarios por mes</div>
-            <div class="month-bars" id="bars"></div>
-            <hr class="section-sep">
-            <div class="btns"><button class="btn" onclick="goTo(0)">Recalcular</button></div>
-        </div>
+            <div class="step" id="step-3">
+                <div class="step-header">Resultados</div>
+                <div class="step-title">Huella hídrica de tu jardín</div>
+                <div class="metric-grid" id="metrics"></div>
+                <div id="verdict-box"></div>
+                <hr class="section-sep">
+                <div style="font-size: 12px; font-weight: 600; color: #9C0A4F; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;">Litros de riego artificial por mes</div>
+                <div class="month-bars" id="bars"></div>
+                <hr class="section-sep">
+                <div class="btns"><button class="btn" onclick="goTo(0)">Recalcular</button></div>
+            </div>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-title">GRUPO ECÓSFERA</div>
@@ -145,136 +159,126 @@
             <div><img src="/images/logos/circle_flower.png" alt="Logo de Grupo Ecósfera"></div>
         </div>
     </footer>
-    <script>
-        const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-        const PRECIP = [15,8,6,7,15,148,252,198,152,55,18,14];
-        const ETO    = [82,95,128,145,158,132,112,108,98,92,76,72];
-        const PE_EFF = 0.75;
 
+    <script>
+        const MESES   = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        const PRECIP  = [15,8,6,7,15,148,252,198,152,55,18,14];
+        const ETO     = [82,95,128,145,158,132,112,108,98,92,76,72];
+        const PE_EFF  = 0.75;
         let currentStep = 0;
 
         function renderProgress(step) {
-        const p = document.getElementById('progress');
-        p.innerHTML = [0,1,2,3].map(i =>
-            `<div class="pip ${i < step ? 'done' : i === step ? 'active' : ''}"></div>`
-        ).join('');
+            const p = document.getElementById('progress');
+            p.innerHTML = [0,1,2,3].map(i =>
+                `<div class="pip ${i < step ? 'done' : i === step ? 'active' : ''}"></div>`
+            ).join('');
         }
 
         function goTo(n) {
-        document.getElementById('step-'+currentStep).classList.remove('active');
-        currentStep = n;
-        document.getElementById('step-'+currentStep).classList.add('active');
-        renderProgress(n);
+            document.getElementById('step-' + currentStep).classList.remove('active');
+            currentStep = n;
+            document.getElementById('step-' + currentStep).classList.add('active');
+            renderProgress(n);
         }
 
         function getRadio(name) {
-        const el = document.querySelector(`input[name="${name}"]:checked`);
-        return el ? parseFloat(el.value) : 0;
+            const el = document.querySelector(`input[name="${name}"]:checked`);
+            return el ? parseFloat(el.value) : 0;
         }
 
         function calcular() {
-        const largo = parseFloat(document.getElementById('pasto-largo').value) || 0;
-        const ancho = parseFloat(document.getElementById('pasto-ancho').value) || 0;
-        const areaPasto = largo * ancho;
+            const largo = parseFloat(document.getElementById('pasto-largo').value) || 0;
+            const ancho = parseFloat(document.getElementById('pasto-ancho').value) || 0;
+            const areaPasto = largo * ancho;
+            const arbG = parseInt(document.getElementById('arb-g').value) || 0;
+            const arbM = parseInt(document.getElementById('arb-m').value) || 0;
+            const arbS = parseInt(document.getElementById('arb-s').value) || 0;
+            const mac  = parseInt(document.getElementById('macetas').value) || 0;
+            const areaArbG  = arbG * 12;
+            const areaArbM  = arbM * 5;
+            const areaArbS  = arbS * 0.5;
+            const areaMac   = mac  * 0.08;
+            const areaPlants = areaArbG + areaArbM + areaArbS + areaMac;
+            const areaTotal  = areaPasto + areaPlants;
+            const kcPasto    = getRadio('pasto');
+            const kcJardin   = getRadio('jardin');
+            const solFactor  = getRadio('sol');
+            const efRiego    = getRadio('riego');
+            const kcTotal    = areaPasto > 0
+                ? (areaPasto * kcPasto + areaPlants * kcJardin) / (areaTotal || 1)
+                : kcJardin;
+            const kcEfectivo = kcTotal * solFactor;
+            let totalDeficit = 0;
+            const monthly = MESES.map((mes, i) => {
+                const etc = ETO[i] * kcEfectivo;
+                const pe  = PRECIP[i] * PE_EFF;
+                const deficit = Math.max(0, etc - pe);
+                const litros  = deficit * areaTotal;
+                const litrosSource = litros / efRiego;
+                totalDeficit += litrosSource;
+                return { mes, etc: Math.round(etc), pe: Math.round(pe), deficit: Math.round(deficit), litros: Math.round(litros), litrosSource: Math.round(litrosSource) };
+            });
+            const totalAnual    = Math.round(totalDeficit);
+            const mesMax        = monthly.reduce((a, b) => a.litrosSource > b.litrosSource ? a : b);
+            const mesesSinRiego = monthly.filter(m => m.litros === 0).length;
 
-        const arbG = parseInt(document.getElementById('arb-g').value) || 0;
-        const arbM = parseInt(document.getElementById('arb-m').value) || 0;
-        const arbS = parseInt(document.getElementById('arb-s').value) || 0;
-        const mac  = parseInt(document.getElementById('macetas').value) || 0;
+            document.getElementById('metrics').innerHTML = `
+                <div class="metric"><div class="val">${areaTotal.toFixed(1)} m²</div><div class="lbl">Área verde total</div></div>
+                <div class="metric"><div class="val">${totalAnual.toLocaleString()}</div><div class="lbl">Litros/año de la fuente</div></div>
+                <div class="metric"><div class="val">${mesesSinRiego}</div><div class="lbl">Meses sin riego</div></div>
+            `;
 
-        const areaArbG = arbG * 12;
-        const areaArbM = arbM * 5;
-        const areaArbS = arbS * 0.5;
-        const areaMac  = mac  * 0.08;
-        const areaPlants = areaArbG + areaArbM + areaArbS + areaMac;
-        const areaTotal = areaPasto + areaPlants;
+            const okColor = mesesSinRiego >= 5 ? 'ok' : 'warn';
+            const okIcon  = okColor === 'ok' ? '✓' : '!';
+            document.getElementById('verdict-box').innerHTML = `
+                <div class="verdict ${okColor}">
+                    <div class="v-title">${okIcon} ${mesesSinRiego} de 12 meses no requieren riego artificial</div>
+                    <div class="v-sub">El mes con mayor demanda es <strong>${mesMax.mes}</strong> con aprox. ${mesMax.litrosSource.toLocaleString()} L extraídos de la fuente. En temporada de lluvias (jun–oct) el jardín se mantiene solo.</div>
+                </div>
+            `;
 
-        const kcPasto  = getRadio('pasto');
-        const kcJardin = getRadio('jardin');
-        const solFactor = getRadio('sol');
-        const efRiego  = getRadio('riego');
+            const maxL = Math.max(...monthly.map(m => m.litrosSource), 1);
+            document.getElementById('bars').innerHTML = monthly.map(m => {
+                const pct   = Math.round((m.litrosSource / maxL) * 100);
+                const color = m.litrosSource === 0 ? '#5DCAA5' : pct > 60 ? '#EF9F27' : '#9FE1CB';
+                const label = m.litrosSource === 0 ? 'lluvia ✓' : m.litrosSource.toLocaleString() + ' L';
+                return `<div class="bar-row">
+                    <div class="bar-label">${m.mes}</div>
+                    <div class="bar-track"><div class="bar-inner" style="width:${pct}%;background:${color};"></div></div>
+                    <div class="bar-val">${label}</div>
+                </div>`;
+            }).join('');
 
-        const kcTotal = areaPasto > 0
-            ? (areaPasto * kcPasto + areaPlants * kcJardin) / (areaTotal || 1)
-            : kcJardin;
-
-        const kcEfectivo = kcTotal * solFactor;
-
-        let totalDeficit = 0;
-        const monthly = MESES.map((mes, i) => {
-            const etc = ETO[i] * kcEfectivo;
-            const pe  = PRECIP[i] * PE_EFF;
-            const deficit = Math.max(0, etc - pe);
-            const litros  = deficit * areaTotal;
-            const litrosSource = litros / efRiego;
-            totalDeficit += litrosSource;
-            return { mes, etc: Math.round(etc), pe: Math.round(pe), deficit: Math.round(deficit), litros: Math.round(litros), litrosSource: Math.round(litrosSource) };
-        });
-
-        const totalAnual = Math.round(totalDeficit);
-        const mesMax = monthly.reduce((a,b) => a.litrosSource > b.litrosSource ? a : b);
-        const mesesSinRiego = monthly.filter(m => m.litros === 0).length;
-
-        document.getElementById('metrics').innerHTML = `
-            <div class="metric"><div class="val">${areaTotal.toFixed(1)} m²</div><div class="lbl">Área verde total</div></div>
-            <div class="metric"><div class="val">${totalAnual.toLocaleString()}</div><div class="lbl">Litros/año de la fuente</div></div>
-            <div class="metric"><div class="val">${mesesSinRiego}</div><div class="lbl">Meses sin riego</div></div>
-        `;
-
-        const okColor = mesesSinRiego >= 5 ? 'ok' : 'warn';
-        const okIcon  = okColor === 'ok' ? '✓' : '!';
-        document.getElementById('verdict-box').innerHTML = `
-            <div class="verdict ${okColor}">
-            <div class="v-title">${okIcon} ${mesesSinRiego} de 12 meses no requieren riego artificial</div>
-            <div class="v-sub">El mes con mayor demanda es <strong>${mesMax.mes}</strong> con aprox. ${mesMax.litrosSource.toLocaleString()} L extraídos de la fuente. En temporada de lluvias (jun–oct) el jardín se mantiene solo.</div>
-            </div>
-        `;
-
-        const maxL = Math.max(...monthly.map(m => m.litrosSource), 1);
-        document.getElementById('bars').innerHTML = monthly.map(m => {
-            const pct = Math.round((m.litrosSource / maxL) * 100);
-            const color = m.litrosSource === 0 ? '#5DCAA5' : pct > 60 ? '#EF9F27' : '#9FE1CB';
-            const label = m.litrosSource === 0 ? 'lluvia ✓' : m.litrosSource.toLocaleString() + ' L';
-            return `<div class="bar-row">
-            <div class="bar-label">${m.mes}</div>
-            <div class="bar-track"><div class="bar-inner" style="width:${pct}%;background:${color};"></div></div>
-            <div class="bar-val">${label}</div>
-            </div>`;
-        }).join('');
-
-        goTo(3);
+            goTo(3);
         }
 
         document.querySelectorAll('.radio-grid').forEach(grid => {
-        grid.querySelectorAll('.radio-opt').forEach(opt => {
-            opt.addEventListener('click', () => {
-            grid.querySelectorAll('.radio-opt').forEach(o => o.classList.remove('selected'));
-            opt.classList.add('selected');
-            opt.querySelector('input').checked = true;
+            grid.querySelectorAll('.radio-opt').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    grid.querySelectorAll('.radio-opt').forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                    opt.querySelector('input').checked = true;
+                });
             });
-        });
         });
 
         renderProgress(0);
 
         /* ── Hamburger menu ── */
-      const hamburger = document.getElementById('hamburger-btn');
-      const navMenu = document.getElementById('nav-menu');
- 
-      hamburger.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('nav-open');
-        hamburger.classList.toggle('is-open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
-      });
- 
-      // Close menu when a nav link is clicked
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('nav-open');
-          hamburger.classList.remove('is-open');
-          hamburger.setAttribute('aria-expanded', 'false');
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu   = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('nav-open');
+            hamburger.classList.toggle('is-open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
         });
-      });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
     </script>
 </body>
 </html>
